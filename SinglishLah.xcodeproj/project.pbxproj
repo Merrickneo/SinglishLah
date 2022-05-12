@@ -44,6 +44,7 @@
 		4681E294282D0E9300E2BA60 /* SinglishLahUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinglishLahUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681E298282D0E9300E2BA60 /* SinglishLahUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglishLahUITests.swift; sourceTree = "<group>"; };
 		4681E29A282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglishLahUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4681E2A8282D11DE00E2BA60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,7 @@
 		4681E271282D0E9000E2BA60 = {
 			isa = PBXGroup;
 			children = (
+				4681E2A8282D11DE00E2BA60 /* README.md */,
 				4681E27C282D0E9000E2BA60 /* SinglishLah */,
 				4681E28D282D0E9300E2BA60 /* SinglishLahTests */,
 				4681E297282D0E9300E2BA60 /* SinglishLahUITests */,
