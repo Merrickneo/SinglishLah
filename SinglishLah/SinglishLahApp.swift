@@ -11,7 +11,7 @@ import SwiftUI
 struct SinglishLahApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RegistrationPageView()
         }
     }
 }
