@@ -30,7 +30,6 @@ class AppViewModel: ObservableObject {
                 // Success
                 self?.signedIn = true
             }
-            
         }
     }
     
