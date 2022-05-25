@@ -7,9 +7,38 @@
 
 import SwiftUI
 
+let backgroundGradient = LinearGradient(
+    gradient: Gradient(colors: [Color.blue, Color.white]),
+    startPoint: .top, endPoint: .bottom)
+
 struct HomePageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            backgroundGradient
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Text("Welcome Back, User!")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                    .padding()
+                Spacer()
+                Text("Level 10")
+                Spacer()
+                Text("insert progress bar and trophy")
+                Spacer()
+                Text("100XP to Level 11")
+                    .font(.subheadline)
+                Spacer()
+                                
+                HStack {
+                    Text("Yo")
+                    Image(systemName: "signature")
+                }
+            }
+        }
+        
     }
 }
 
