@@ -10,44 +10,63 @@ import SwiftUI
 struct HomeView: View {
     @State var progressValue: Float = 0.2
     
+    private let locations = ["Hawker Centre", "Water Park", "MRT Station", "Airport"]
     var body: some View {
-        ZStack {
-            Color("Bg")
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack (alignment: .leading) {
-                ExtView()
+        VStack {
+            ZStack {
+                Color("Bg")
+                    .edgesIgnoringSafeArea(.all)
                 
-                TagLineView()
-                    .padding()
-                
-                HStack {
-                    HStack {
-                        VStack {
-                            ProgressBar(value: $progressValue).frame(height: 20)
-                            
-                            Text("160XP to Level 11")
-                        }.padding()
-                    }
-                }
-                
-                ExploreView()
-                    .padding()
-                
-                TranslateView()
-                    .padding()
-                
-                Text("Explore Singapore")
-                    .font(.system(size: 24))
-                    .padding(.horizontal)
-                
-                ScrollView (.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(0 ..< 4) { item in
-                            ExplorationView(image: Image("lunch"))
+                ScrollView (showsIndicators: false) {
+                    VStack (alignment: .leading) {
+                        ExtView()
+                        
+                        TagLineView()
+                            .padding()
+                        
+                        HStack {
+                            HStack {
+                                VStack {
+                                    ProgressBar(value: $progressValue).frame(height: 20)
+                                    
+                                    Text("160XP to Level 11")
+                                }.padding()
+                            }
                         }
-                        .padding(.trailing)
-                    }.padding(.leading)
+                        
+                        ExploreView()
+                            .padding()
+                        
+                        TranslateView()
+                            .padding()
+                        
+                        Text("Explore Singapore")
+                            .font(.system(size: 24))
+                            .padding(.horizontal)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(0 ..< 4) { index in
+                                    ExplorationView(image: Image("lunch_\(index + 1)"), size: 210, caption: locations[index])
+                                }
+                                .padding(.trailing)
+                            }.padding(.leading)
+                        }
+                        .padding(.bottom)
+                        
+                        HStack {
+                            BottomNavBarItem(image: Image(systemName: "house")) {}
+                            BottomNavBarItem(image: Image(systemName: "magnifyingglass")) {}
+                            BottomNavBarItem(image: Image(systemName: "book")) {}
+                            BottomNavBarItem(image: Image(systemName: "person")) {}
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .clipShape(Capsule())
+                        .padding(.horizontal)
+                        .shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                    }
                 }
             }
         }
@@ -114,7 +133,7 @@ struct TranslateView: View {
     @State private var search: String = ""
     var body: some View {
         VStack {
-            Text("SinglishLah!")
+            Text("Quick Translate")
                 .font(.system(size: 16))
             HStack {
                 Image(systemName: "magnifyingglass")
@@ -146,19 +165,32 @@ struct ProgressBar: View {
 
 struct ExplorationView: View {
     let image: Image
+    let size: CGFloat
+    let caption: String
     var body: some View {
         VStack {
-            Image("lunch")
+            image
                 .resizable()
-                .frame(width: 210, height: 200)
+                .frame(width: size, height: 200 * (size/210))
                 .cornerRadius(20.0)
             
-            Text("Hawker Centre")
+            Text(caption)
                 .font(.title3)
         }
         .frame(width: 210)
         .padding()
         .background(Color.white)
         .cornerRadius(20.0)
+    }
+}
+
+struct BottomNavBarItem: View {
+    let image: Image
+    let action: () -> Void
+    var body: some View {
+        Button(action: {}, label: {
+            image
+                .frame(maxWidth: .infinity)
+        })
     }
 }
