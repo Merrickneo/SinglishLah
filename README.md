@@ -28,5 +28,46 @@ Logging in interface
 - If the user is already logged in, they will be redirected to the Homepage
 
 ### 2) Homepage
+Welcome back message for users
+
+Shares with users a daily Singlish quote
+- Provides small bites of information to the user to reinforce learning
+
+Singlish Scenarios
+- Gives users various examples of how certain Singlish words are used in various scenarios
+- e.g. Coffee Shop, MRTs 
+
+Experience Singapore
+- Shows users various tourist attractions based on their current locality
+- Filters and shows the attractions that are the closest to their location
+
+Buttons to switch to the other pages
+- At the bottom of the screen, which is accessible across all the different pages (Homepage, Search Page, Vocabulary Builder Page, Profile Page)
+
+### 3) Translation Page
+Search feature allows users to do a lookup Singlish words and phrases
+
+Users can also make use of the speech translation tool to look up phrases through speech as the input
+
+### 4) Vocabulary Builder Page
+Guided Sentence Structuring Game
+- Users will be given a Singlish Sentence with blanks in between
+- EXP points will be awarded to the user for completing exercises
+
+### 5) EXP Accumulation
+
+### 6) Profile Page
+Settings 
+- Users are able to configure various settings such as dark mode, change personal particulars
+
+Customisation of in-app avatar
+- As the user attains higher levels, he/she will unlock more customisation options for his avatar
+- Users can then customise the avatar to suit his/her liking
+
+
+
+
+
+
 
 
