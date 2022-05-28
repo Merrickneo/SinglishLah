@@ -19,7 +19,7 @@ struct HomeView: View {
                 
                 ScrollView (showsIndicators: false) {
                     VStack (alignment: .leading) {
-                        ExtView()
+                        // ExtView()
                         
                         TagLineView()
                             .padding()
@@ -40,7 +40,7 @@ struct HomeView: View {
                         TranslateView()
                             .padding()
                         
-                        Text("Explore Singapore")
+                        Text("SinglishLah! Scenarios")
                             .font(.system(size: 24))
                             .padding(.horizontal)
                         
@@ -48,6 +48,20 @@ struct HomeView: View {
                             HStack {
                                 ForEach(0 ..< 4) { index in
                                     ExplorationView(image: Image("lunch_\(index + 1)"), size: 210, caption: locations[index])
+                                }
+                                .padding(.trailing)
+                            }.padding(.leading)
+                        }
+                        .padding(.bottom)
+                        
+                        Text("Experience Singapore")
+                            .font(.system(size: 24))
+                            .padding(.horizontal)
+                        
+                        ScrollView (.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(0 ..< 4) { index in
+                                    ExplorationView(image: Image("lunch_\(index + 1)"), size: 180, caption: locations[index])
                                 }
                                 .padding(.trailing)
                             }.padding(.leading)
