@@ -11,6 +11,7 @@ struct HomeView: View {
     @State var progressValue: Float = 0.2
     
     private let locations = ["Hawker Centre", "Water Park", "MRT Station", "Airport"]
+    private let experiences = ["Marina Bay", "Singapore Zoo", "Chinatown", "Kampong Glam"]
     var body: some View {
         VStack {
             ZStack {
@@ -61,7 +62,7 @@ struct HomeView: View {
                         ScrollView (.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(0 ..< 4) { index in
-                                    ExplorationView(image: Image("lunch_\(index + 1)"), size: 180, caption: locations[index])
+                                    ExplorationView(image: Image("experience_\(index + 1)"), size: 180, caption: experiences[index])
                                 }
                                 .padding(.trailing)
                             }.padding(.leading)
