@@ -55,6 +55,12 @@ Guided Sentence Structuring Game
 - EXP points will be awarded to the user for completing exercises
 
 ### 5) EXP Accumulation
+Progress Bar shows users how much more XP he/she needs to level up. Levelling up unlocks more customisation options for his avatar icon
+
+Streaks
+- Users are given bonus XP if he/she partakes in quizzes daily. S
+- Serves as a motivator for the user to make progress in Singlish daily.
+
 
 ### 6) Profile Page
 Settings 
