@@ -19,4 +19,6 @@ target 'SinglishLah' do
     # Pods for testing
   end
 
+pod 'InstantSearchVoiceOverlay'
+
 end
