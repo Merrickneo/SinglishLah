@@ -126,10 +126,10 @@
 		4681E27C282D0E9000E2BA60 /* SinglishLah */ = {
 			isa = PBXGroup;
 			children = (
+				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
 				5D951A61283BC2D6009B64DE /* HomePageView.swift */,
 				5DFF98B6283CEE7C00B313FC /* HomeView.swift */,
-				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
 				46DB5639282D528E006EE859 /* TranslationPageView.swift */,
 				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,

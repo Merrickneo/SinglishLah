@@ -14,18 +14,9 @@ struct RegistrationPageView: View {
         NavigationView {
             
             if viewModel.signedIn {
-                VStack {
-                    Text("You are signed in")
-                    Button(action: {
-                        viewModel.signOut()
-                    }, label: {
-                        Text("Sign Out")
-                            .frame(width: 200, height: 50)
-                            .background(Color.green)
-                            .foregroundColor(Color.blue)
-                    })
+                // Change here later to navigate to the HomePage Later
+                    HomeView()
                 }
-            }
             else {
                 SignInView()
             }
