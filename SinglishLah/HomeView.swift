@@ -71,7 +71,7 @@ struct HomeView: View {
                     }
                 }
                 HStack {
-                    BottomNavBarItem(image: Image(systemName: "house")) {}
+                    BottomNavBarItem(image: Image(systemName: "house.fill")) {}
                     BottomNavBarItem(image: Image(systemName: "magnifyingglass")) {}
                     BottomNavBarItem(image: Image(systemName: "book")) {}
                     BottomNavBarItem(image: Image(systemName: "person")) {}
@@ -150,7 +150,7 @@ struct TranslateView: View {
             Text("Quick Translate")
                 .font(.system(size: 16))
             HStack {
-                Image(systemName: "magnifyingglass")
+                Image(systemName: "magnifyingglass.circle.fill")
                 TextField("enter word/phrase", text: $search)
             }.padding()
                 .background(Color.white)
