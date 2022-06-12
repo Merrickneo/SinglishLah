@@ -35,13 +35,13 @@ struct HomeView: View {
                             }
                         }
                         
-                        ExploreView()
-                            .padding()
+                        //ExploreView()
+                            //.padding()
                         
-                        TranslateView()
-                            .padding()
+                        //TranslateView()
+                            //.padding()
                         
-                        Text("SinglishLah! Scenarios")
+                        Text("Singlish Scenarios")
                             .font(.system(size: 24))
                             .padding(.horizontal)
                         
