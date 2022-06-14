@@ -18,8 +18,7 @@ struct NewHomeView: View {
                 }
                 .tag(0)
          
-            Text("Translate Tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            SinglishSearchPage()
                 .tabItem {
                     Image(systemName: "bookmark.circle.fill")
                     Text("Translate")

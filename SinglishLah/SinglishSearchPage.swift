@@ -22,18 +22,7 @@ struct SinglishSearchPage: View {
                     Text(speechToText())
                     TextField("Hello", text: $name)
                     Text("Saved Words")
-                    HStack {
-                        BottomNavBarItem(image: Image(systemName: "house")) {}
-                        BottomNavBarItem(image: Image(systemName: "magnifyingglass.circle.fill")) {}
-                        BottomNavBarItem(image: Image(systemName: "book")) {}
-                        BottomNavBarItem(image: Image(systemName: "person")) {}
-                    }
-                    .padding()
-                    .background(Color.white)
-                    .clipShape(Capsule())
-                    .padding(.horizontal)
-                    .shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
-                    .frame(maxHeight: .infinity, alignment: .bottom)
+                    
                 }
             }
         }
