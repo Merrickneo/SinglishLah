@@ -18,6 +18,7 @@
 		4681E29B282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E29A282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift */; };
 		46CCE26A2852496B00FCE0D7 /* SinglishSearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */; };
 		46DB563A282D528E006EE859 /* TranslationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB5639282D528E006EE859 /* TranslationPageView.swift */; };
+		5D3BDA662858DA2100C9C5F3 /* TabHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */; };
 		5D951A62283BC2D6009B64DE /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D951A61283BC2D6009B64DE /* HomePageView.swift */; };
 		5DAC2B26283BC1340003D8B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC2B25283BC1340003D8B5 /* GoogleService-Info.plist */; };
 		5DFF98B7283CEE7C00B313FC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF98B6283CEE7C00B313FC /* HomeView.swift */; };
@@ -61,6 +62,7 @@
 		46CCE26B28524AF100FCE0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46DB5639282D528E006EE859 /* TranslationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPageView.swift; sourceTree = "<group>"; };
 		52669C1933CFEC0EDFEA4C93 /* Pods-SinglishLahTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinglishLahTests.release.xcconfig"; path = "Target Support Files/Pods-SinglishLahTests/Pods-SinglishLahTests.release.xcconfig"; sourceTree = "<group>"; };
+		5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabHomeView.swift; sourceTree = "<group>"; };
 		5D951A61283BC2D6009B64DE /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		5DAC2B25283BC1340003D8B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DFF98B6283CEE7C00B313FC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
 				5D951A61283BC2D6009B64DE /* HomePageView.swift */,
 				5DFF98B6283CEE7C00B313FC /* HomeView.swift */,
+				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
 				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
 				46DB5639282D528E006EE859 /* TranslationPageView.swift */,
 				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
@@ -431,6 +434,7 @@
 				46CCE26A2852496B00FCE0D7 /* SinglishSearchPage.swift in Sources */,
 				46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */,
 				4681E280282D0E9000E2BA60 /* ContentView.swift in Sources */,
+				5D3BDA662858DA2100C9C5F3 /* TabHomeView.swift in Sources */,
 				46DB563A282D528E006EE859 /* TranslationPageView.swift in Sources */,
 				5DFF98B7283CEE7C00B313FC /* HomeView.swift in Sources */,
 				4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */,

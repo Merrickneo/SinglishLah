@@ -70,18 +70,18 @@ struct HomeView: View {
                         .padding(.bottom)
                     }
                 }
-                HStack {
-                    BottomNavBarItem(image: Image(systemName: "house.fill")) {}
-                    BottomNavBarItem(image: Image(systemName: "magnifyingglass")) {}
-                    BottomNavBarItem(image: Image(systemName: "book")) {}
-                    BottomNavBarItem(image: Image(systemName: "person")) {}
-                }
-                .padding()
-                .background(Color.white)
-                .clipShape(Capsule())
-                .padding(.horizontal)
-                .shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
-                .frame(maxHeight: .infinity, alignment: .bottom)
+                //HStack {
+                  //  BottomNavBarItem(image: Image(systemName: "house.fill")) {}
+                    //BottomNavBarItem(image: Image(systemName: "magnifyingglass")) {}
+                    //BottomNavBarItem(image: Image(systemName: "book")) {}
+                    //BottomNavBarItem(image: Image(systemName: "person")) {}
+                //}
+                //.padding()
+                //.background(Color.white)
+                //.clipShape(Capsule())
+                //.padding(.horizontal)
+                //.shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
+                //.frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
     }
@@ -206,5 +206,44 @@ struct BottomNavBarItem: View {
             image
                 .frame(maxWidth: .infinity)
         })
+    }
+}
+
+struct NewView: View {
+    @State private var selection = 0
+    var body: some View {
+        TabView(selection: $selection) {
+            Text("Home Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+                .tag(0)
+         
+            Text("Bookmark Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Image(systemName: "bookmark.circle.fill")
+                    Text("Bookmark")
+                }
+                .tag(1)
+         
+            Text("Video Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Image(systemName: "video.circle.fill")
+                    Text("Video")
+                }
+                .tag(2)
+         
+            Text("Profile Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Profile")
+                }
+                .tag(3)
+        }
     }
 }
