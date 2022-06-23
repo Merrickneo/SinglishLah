@@ -9,6 +9,8 @@ target 'SinglishLah' do
 
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 
   target 'SinglishLahTests' do
     inherit! :search_paths

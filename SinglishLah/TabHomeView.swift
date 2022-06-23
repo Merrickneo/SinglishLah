@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewHomeView: View {
+struct TabHomeView: View {
     @State private var selection = 0
     var body: some View {
         TabView(selection: $selection) {
@@ -33,8 +33,7 @@ struct NewHomeView: View {
                 }
                 .tag(2)
          
-            Text("Profile Tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
@@ -44,8 +43,8 @@ struct NewHomeView: View {
     }
 }
 
-struct NewHomeView_Previews: PreviewProvider {
+struct TabHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NewHomeView()
+        TabHomeView()
     }
 }
