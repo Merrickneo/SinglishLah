@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: AppViewModel
     @State var progressValue: Float = 0.2
     
     private let locations = ["Hawker Centre", "Water Park", "MRT Station", "Airport"]
@@ -21,7 +22,6 @@ struct HomeView: View {
                 ScrollView (showsIndicators: false) {
                     VStack (alignment: .leading) {
                         // ExtView()
-                        
                         TagLineView()
                             .padding()
                         
