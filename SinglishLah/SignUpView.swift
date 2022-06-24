@@ -14,9 +14,12 @@ import FirebaseDatabase
 struct SignUpView: View {
     @State var email = ""
     @State var password = ""
-    @State var first = ""
-    @State var last = ""
+    @State var firstName = ""
+    @State var lastName = ""
     @EnvironmentObject var viewModel: AppViewModel
+    
+    @StateObject private var vm = RegistrationViewModelImpl(service: RegistrationServiceImpl()
+    )
     
     var body: some View {
         VStack {
@@ -26,23 +29,23 @@ struct SignUpView: View {
                 .frame(width: 150, height: 150)
             
             VStack {
-                TextField("Email Address", text: $email)
+                TextField("Email Address", text: $vm.newUser.email)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(.secondarySystemBackground))
                 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $vm.newUser.password)
                     .padding()
                     .background(Color(.secondarySystemBackground))
                 
-                TextField("First Name", text: $first)
+                TextField("First Name", text: $vm.newUser.firstName)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
                     .background(Color(.secondarySystemBackground))
                 
-                TextField("Last Name", text: $last)
+                TextField("Last Name", text: $vm.newUser.lastName)
                     .disableAutocorrection(true)
                     .autocapitalization(.none)
                     .padding()
@@ -54,6 +57,8 @@ struct SignUpView: View {
                         return
                     }
                     viewModel.signUp(email: email, password: password)
+                    //vm.create()
+                    
                 }, label: {
                     Text("Create Account")
                         .foregroundColor(.white)
