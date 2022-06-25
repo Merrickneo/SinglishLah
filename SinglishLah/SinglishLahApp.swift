@@ -57,31 +57,48 @@ class AppViewModel: ObservableObject {
     }
 }
 
+final class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        return true
+    }
+}
+
 
 
 @main
-struct SinglishLahApp: App {
+struct Firebase_User_Account_ManagementApp: App {
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var sessionService = SessionServiceImpl()
     
     var body: some Scene {
         WindowGroup {
-            let viewModel = AppViewModel()
-            RegistrationPageView()
-                .environmentObject(viewModel)
+            NavigationView {
+                switch sessionService.state {
+                    case .loggedIn:
+                        TabHomeView()
+                            .environmentObject(sessionService)
+                    case .loggedOut:
+                        SignInView()
+                    }
+                
+            }
         }
     }
 }
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
-         [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+//class AppDelegate: NSObject, UIApplicationDelegate {
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+//         [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
-        FirebaseApp.configure()
+//        FirebaseApp.configure()
         
-        return true
-    }
-}
+//        return true
+//    }
+//}
 
 enum SessionState {
     case loggedIn

@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var service: SessionServiceImpl
 
     var body: some View {
         Button(action: {
-            viewModel.signOut()
+            service.logout()
         }, label: {
             Text("Sign Out")
                 .foregroundColor(Color.blue)

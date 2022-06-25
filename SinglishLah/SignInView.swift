@@ -251,6 +251,8 @@ struct InputTextFieldView: View {
                        alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding(.leading, systemImage == nil ? textFieldLeading / 2 : textFieldLeading)
                 .keyboardType(keyboardType)
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .background(
                     
                     ZStack(alignment: .leading) {
@@ -289,6 +291,8 @@ struct InputPasswordView: View {
                        minHeight: 44,
                        alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding(.leading, systemImage == nil ? textFieldLeading / 2 : textFieldLeading)
+                .disableAutocorrection(true)
+                .autocapitalization(.none)
                 .background(
                     
                     ZStack(alignment: .leading) {

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TabHomeView: View {
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor.white
+    }
     @State private var selection = 0
     var body: some View {
         TabView(selection: $selection) {
