@@ -86,7 +86,7 @@ struct HomeView: View {
                 //.shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
                 //.frame(maxHeight: .infinity, alignment: .bottom)
             }
-            .navigationTitle("SinglishLah! Home")
+            //.navigationTitle("SinglishLah! Home")
         }
     }
     

@@ -12,6 +12,7 @@ struct TabHomeView: View {
         UITabBar.appearance().backgroundColor = UIColor.white
     }
     @State private var selection = 0
+    @EnvironmentObject var service: SessionServiceImpl
     var body: some View {
         TabView(selection: $selection) {
             HomeView()
@@ -49,5 +50,6 @@ struct TabHomeView: View {
 struct TabHomeView_Previews: PreviewProvider {
     static var previews: some View {
         TabHomeView()
+            .environmentObject(SessionServiceImpl())
     }
 }
