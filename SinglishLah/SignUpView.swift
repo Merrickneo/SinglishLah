@@ -12,68 +12,68 @@ import Firebase
 import FirebaseDatabase
 
 struct SignUpView: View {
-    @State var email = ""
-    @State var password = ""
-    @State var firstName = ""
-    @State var lastName = ""
-    @EnvironmentObject var viewModel: AppViewModel
+    //@State var email = ""
+    //@State var password = ""
+    //@State var firstName = ""
+    //@State var lastName = ""
+    //@EnvironmentObject var viewModel: AppViewModel
     
-    @StateObject private var vm = RegistrationViewModelImpl(service: RegistrationServiceImpl()
+    @StateObject private var viewModel = RegistrationViewModelImpl(service: RegistrationServiceImpl()
     )
     
     var body: some View {
-        VStack {
-            Image("Microphone")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 150, height: 150)
             
-            VStack {
-                TextField("Email Address", text: $vm.newUser.email)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
+            NavigationView {
                 
-                SecureField("Password", text: $vm.newUser.password)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                
-                TextField("First Name", text: $vm.newUser.firstName)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                
-                TextField("Last Name", text: $vm.newUser.lastName)
-                    .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                
-                Button(action: {
-                    // Ensures the Email and Password fields are non-empty
-                    guard !email.isEmpty, !password.isEmpty else {
-                        return
-                    }
-                    viewModel.signUp(email: email, password: password)
-                    //vm.create()
+                VStack(spacing: 32) {
                     
-                }, label: {
-                    Text("Create Account")
-                        .foregroundColor(.white)
-                        .frame(width: 200, height: 50)
-                        .cornerRadius(8)
-                        .background(Color.blue)
+                    VStack(spacing: 16) {
+                        
+                        InputTextFieldView(text: $viewModel.newUser.email,
+                                           placeholder: "Email",
+                                           keyboardType: .emailAddress,
+                                           systemImage: "envelope")
+                        
+                        InputPasswordView(password: $viewModel.newUser.password,
+                                          placeholder: "Password",
+                                          systemImage: "lock")
+                        
+                        Divider()
+                        
+                        InputTextFieldView(text: $viewModel.newUser.firstName,
+                                           placeholder: "First Name",
+                                           keyboardType: .namePhonePad,
+                                           systemImage: nil)
+                        
+                        InputTextFieldView(text: $viewModel.newUser.lastName,
+                                           placeholder: "Last Name",
+                                           keyboardType: .namePhonePad,
+                                           systemImage: nil)
+                    }
+                    
+                    ButtonView(title: "Create Account") {
+                        viewModel.create()
+                    }
+                }
+                .padding(.horizontal, 15)
+                .navigationTitle("Register")
+                //.applyClose()
+                .alert(isPresented: $viewModel.hasError,
+                       content: {
+                        
+                        if case .failed(let error) = viewModel.state {
+                            return Alert(
+                                title: Text("Error"),
+                                message: Text(error.localizedDescription))
+                        } else {
+                            return Alert(
+                                title: Text("Error"),
+                                message: Text("Something went wrong"))
+                        }
                 })
             }
-            .padding()
-            
-            Spacer()
         }
-        .navigationTitle("Create Account")
     }
-}
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
@@ -124,7 +124,7 @@ final class RegistrationServiceImpl: RegistrationService {
                                           RegistrationKeys.lastName.rawValue: credentials.lastName] as [String : Any]
                             
                             Database
-                                .database()
+                                .database(url: "https://singlishlah-1652625809497-default-rtdb.asia-southeast1.firebasedatabase.app")
                                 .reference()
                                 .child("users")
                                 .child(uid)

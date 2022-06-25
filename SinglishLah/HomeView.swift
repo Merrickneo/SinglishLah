@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var viewModel: AppViewModel
+    //@EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject var service: SessionServiceImpl
+    
     @State var progressValue: Float = 0.2
     
     private let locations = ["Hawker Centre", "Water Park", "MRT Station", "Airport"]
@@ -22,7 +24,8 @@ struct HomeView: View {
                 ScrollView (showsIndicators: false) {
                     VStack (alignment: .leading) {
                         // ExtView()
-                        TagLineView()
+                        Text("Welcome Back, \(service.userDetails?.firstName ?? "User")!")
+                            .font(.system(size: 28))
                             .padding()
                         
                         HStack {
@@ -83,6 +86,7 @@ struct HomeView: View {
                 //.shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
                 //.frame(maxHeight: .infinity, alignment: .bottom)
             }
+            .navigationTitle("Main ContentView")
         }
     }
     
@@ -99,7 +103,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        NavigationView {
+            HomeView()
+                .environmentObject(SessionServiceImpl())
+        }
     }
 }
 
