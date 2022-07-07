@@ -9,7 +9,11 @@ import AVFoundation
 import Foundation
 import Speech
 import SwiftUI
+import Firebase
+import FirebaseCore
+import FirebaseFirestore
 import CoreML
+import AVKit
 
 struct SinglishSearchPage: View {
     @State var name: String = ""
@@ -32,6 +36,22 @@ struct SinglishSearchPage: View {
     }
 }
 
+// MARK: - Getting data from Firestore database
+func getData(word: String) -> wordData {
+    
+    
+    return wordData(id: "123", word: "hi", description: "hi")
+}
+
+struct wordData: Identifiable {
+    var id: String
+    var word: String
+    var description: String
+    // Add in example sentences later
+    // var exampleSentence: String
+}
+
+
 
 // MARK: - Functions for Translating Speech
 func initialiseModel() -> SinglishToText? {
@@ -42,16 +62,10 @@ func initialiseModel() -> SinglishToText? {
 
         return model
     } catch {
-        // Do nothing
+        
     }
     return nil
 }
-
-func getSpeechPrediction(model: SinglishToText) -> String {
-    //model.prediction(audioSamples: <#T##MLShapedArray<Float>#>)
-    return "placeholder"
-}
-
 
 func speechToText() -> String {
     return "This is the translated text"

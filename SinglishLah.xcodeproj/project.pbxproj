@@ -216,6 +216,7 @@
 				4681E277282D0E9000E2BA60 /* Frameworks */,
 				4681E278282D0E9000E2BA60 /* Resources */,
 				37904233962DCE462D6AFE65 /* [CP] Embed Pods Frameworks */,
+				64E7F4347FC27CF72CF23FC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +255,7 @@
 				4681E291282D0E9300E2BA60 /* Frameworks */,
 				4681E292282D0E9300E2BA60 /* Resources */,
 				52F4B64A521B157A90C59E63 /* [CP] Embed Pods Frameworks */,
+				5CDE14C8A2898D949E9FBE31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -391,6 +393,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SinglishLah-SinglishLahUITests/Pods-SinglishLah-SinglishLahUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CDE14C8A2898D949E9FBE31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SinglishLah-SinglishLahUITests/Pods-SinglishLah-SinglishLahUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SinglishLah-SinglishLahUITests/Pods-SinglishLah-SinglishLahUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SinglishLah-SinglishLahUITests/Pods-SinglishLah-SinglishLahUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64E7F4347FC27CF72CF23FC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SinglishLah/Pods-SinglishLah-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SinglishLah/Pods-SinglishLah-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SinglishLah/Pods-SinglishLah-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6797157C2B7F7557E120ACB8 /* [CP] Check Pods Manifest.lock */ = {
