@@ -44,9 +44,13 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string></string>
+	<string>Allow Access to recognise your voice</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>Please let us recognise your voice.</string>
+	<string>For Speech Recognition</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>Please let us listen to your voice.</string>
 </dict>

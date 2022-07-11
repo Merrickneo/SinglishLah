@@ -9,15 +9,15 @@ import AVFoundation
 import Foundation
 import Speech
 import SwiftUI
-import Firebase
 import FirebaseCore
 import FirebaseFirestore
 import CoreML
 import AVKit
 
 struct SinglishSearchPage: View {
-    @State var name: String = ""
     @State var searchWord: String = ""
+    @ObservedObject var model = HistoryModel()
+    @State private var showWordDescription = false
     
     var body: some View {
         NavigationView{
@@ -27,21 +27,28 @@ struct SinglishSearchPage: View {
                 VStack {
                     TextBoxView()
                         .padding()
-                    TextField("Hello", text: $name)
                     // Get from history last 3 words
                     Text("Saved Words")
+                    List(model.list) {item in
+                        Button {
+                            self.showWordDescription.toggle()
+                        } label: {
+                            Text(item.word)
+                        }
+                        .sheet(isPresented: $showWordDescription) {
+                            WordDescriptionView(word: item)
+                        }
+                    }
                 }
             }
         }
     }
+    init() {
+        model.getData()
+    }
 }
 
-// MARK: - Getting data from Firestore database
-func getData(word: String) -> wordData {
-    
-    
-    return wordData(id: "123", word: "hi", description: "hi")
-}
+
 
 struct wordData: Identifiable {
     var id: String
@@ -87,6 +94,8 @@ struct TextBoxView: View {
                 Image(systemName: "magnifyingglass")
                 TextField("enter word/phrase", text: $search)
                     .frame(height: 40)
+                
+                // This is for the recording of audio
                 Button {
                     AVAudioSession.sharedInstance().requestRecordPermission { granted in
                         if granted {
