@@ -50,16 +50,6 @@ struct SinglishSearchPage: View {
 
 
 
-struct wordData: Identifiable {
-    var id: String
-    var word: String
-    var description: String
-    // Add in example sentences later
-    // var exampleSentence: String
-}
-
-
-
 // MARK: - Functions for Translating Speech
 func initialiseModel() -> SinglishToText? {
     do {
@@ -84,8 +74,7 @@ struct TextBoxView: View {
     @State var input: String = ""
     @State private var searchResult = false
     @State var model: HistoryModel
-    @State var wordToSearch: wordData = wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
-    //@ObservedObject private var model = HistoryModel()
+    @State var wordToSearch: wordData?    //@ObservedObject private var model = HistoryModel()
     
     var body: some View {
         VStack {
@@ -110,7 +99,8 @@ struct TextBoxView: View {
                        onDismiss: {
                     wordToSearch = wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
                 }, content: {
-                    WordDescriptionView(word: wordToSearch)
+                    WordDescriptionView(word: wordToSearch ?? wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+)
                 })
                 
                 
@@ -129,8 +119,6 @@ struct SinglishSearchPage_Previews: PreviewProvider {
         SinglishSearchPage()
     }
 }
-
-// Get data from querying our database
 
 
 // This is for the recording of audio
