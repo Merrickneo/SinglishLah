@@ -21,7 +21,6 @@
 		46D3847D286817CE00081F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46D3847C286817CE00081F1E /* GoogleService-Info.plist */; };
 		46D384802868180900081F1E /* SinglishToText.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 46D3847E2868180900081F1E /* SinglishToText.mlmodel */; };
 		46D384812868180900081F1E /* SinglishToText.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 46D3847F2868180900081F1E /* SinglishToText.mlproj */; };
-		46DB563A282D528E006EE859 /* TranslationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DB5639282D528E006EE859 /* TranslationPageView.swift */; };
 		5D277CDD28649F4C00C521EE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D277CDC28649F4C00C521EE /* SignUpView.swift */; };
 		5D277CDF28649F8100C521EE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D277CDE28649F8100C521EE /* SignInView.swift */; };
 		5D3BDA662858DA2100C9C5F3 /* TabHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */; };
@@ -71,7 +70,6 @@
 		46D3847C286817CE00081F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46D3847E2868180900081F1E /* SinglishToText.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SinglishToText.mlmodel; sourceTree = "<group>"; };
 		46D3847F2868180900081F1E /* SinglishToText.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SinglishToText.mlproj; sourceTree = "<group>"; };
-		46DB5639282D528E006EE859 /* TranslationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationPageView.swift; sourceTree = "<group>"; };
 		50BBCBBA5F52140E8AFEED35 /* Pods-SinglishLah.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinglishLah.release.xcconfig"; path = "Target Support Files/Pods-SinglishLah/Pods-SinglishLah.release.xcconfig"; sourceTree = "<group>"; };
 		515876E0280E2002ED868634 /* Pods-SinglishLahTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinglishLahTests.debug.xcconfig"; path = "Target Support Files/Pods-SinglishLahTests/Pods-SinglishLahTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D277CDC28649F4C00C521EE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
 				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
 				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
-				46DB5639282D528E006EE859 /* TranslationPageView.swift */,
 				467ED10C287BDA7600CF547B /* WordDescriptionView.swift */,
 				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
 				469D23EC287714230049E0C2 /* HistoryView.swift */,
@@ -493,7 +490,6 @@
 				46D384802868180900081F1E /* SinglishToText.mlmodel in Sources */,
 				4681E280282D0E9000E2BA60 /* ContentView.swift in Sources */,
 				5D3BDA662858DA2100C9C5F3 /* TabHomeView.swift in Sources */,
-				46DB563A282D528E006EE859 /* TranslationPageView.swift in Sources */,
 				5D277CDD28649F4C00C521EE /* SignUpView.swift in Sources */,
 				5DFF98B7283CEE7C00B313FC /* HomeView.swift in Sources */,
 				467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */,

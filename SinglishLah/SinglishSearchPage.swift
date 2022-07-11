@@ -25,7 +25,7 @@ struct SinglishSearchPage: View {
                 Color("Bg")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    TextBoxView()
+                    TextBoxView(model: model)
                         .padding()
                     // Get from history last 3 words
                     Text("Saved Words")
@@ -81,10 +81,11 @@ func speechToText() -> String {
 // MARK: - TextBox UI
 
 struct TextBoxView: View {
-    @State private var search: String = ""
-    
-    // Initilalise our model
-    
+    @State var input: String = ""
+    @State private var searchResult = false
+    @State var model: HistoryModel
+    @State var wordToSearch: wordData = wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+    //@ObservedObject private var model = HistoryModel()
     
     var body: some View {
         VStack {
@@ -92,22 +93,26 @@ struct TextBoxView: View {
                 .font(.system(size: 16))
             HStack {
                 Image(systemName: "magnifyingglass")
-                TextField("enter word/phrase", text: $search)
+                TextField("enter word/phrase", text: $input)
                     .frame(height: 40)
-                
-                // This is for the recording of audio
                 Button {
-                    AVAudioSession.sharedInstance().requestRecordPermission { granted in
-                        if granted {
-                            
-                        } else {
-                            // Ask user to enable recording permissions
+                    // Do a search of the Data
+                    for item in model.list {
+                        if item.word == input.lowercased() {
+                            wordToSearch = item
                         }
                     }
+                    self.searchResult.toggle()
                 } label: {
-                    Image(systemName: "mic.fill")
+                    Text("Search!")
                 }
-
+                .sheet(isPresented: $searchResult,
+                       onDismiss: {
+                    wordToSearch = wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+                }, content: {
+                    WordDescriptionView(word: wordToSearch)
+                })
+                
                 
             }.padding()
                 .background(Color.white)
@@ -116,9 +121,6 @@ struct TextBoxView: View {
     }
 }
 
-// MARK: - Functions to start and stop recording
-
-//TODO
 
 
 
@@ -127,3 +129,23 @@ struct SinglishSearchPage_Previews: PreviewProvider {
         SinglishSearchPage()
     }
 }
+
+// Get data from querying our database
+
+
+// This is for the recording of audio
+//Button {
+//    AVAudioSession.sharedInstance().requestRecordPermission { granted in
+//        if granted {
+//
+//        } else {
+//            // Ask user to enable recording permissions
+//        }
+//    }
+//} label: {
+//    Image(systemName: "mic.fill")
+//}
+
+// MARK: - Functions to start and stop recording
+
+//TODO

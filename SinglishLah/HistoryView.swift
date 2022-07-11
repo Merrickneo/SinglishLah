@@ -33,7 +33,7 @@ class HistoryModel: ObservableObject {
                                 // Get all the documents and create Todos
                                 self.list = snapshot.documents.map { d in
                                     
-                                    // Create a Todo item for each document returned
+                                    // Create a wordData item for each document returned
                                     return wordData(id: d.documentID,
                                                 word: d["word"] as? String ?? "",
                                                 description: d["description"] as? String ?? "")
