@@ -9,11 +9,15 @@ import AVFoundation
 import Foundation
 import Speech
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
 import CoreML
+import AVKit
 
 struct SinglishSearchPage: View {
-    @State var name: String = ""
     @State var searchWord: String = ""
+    @ObservedObject var model = HistoryModel()
+    @State private var showWordDescription = false
     
     var body: some View {
         NavigationView{
@@ -21,16 +25,29 @@ struct SinglishSearchPage: View {
                 Color("Bg")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    TextBoxView()
+                    TextBoxView(model: model)
                         .padding()
-                    TextField("Hello", text: $name)
                     // Get from history last 3 words
                     Text("Saved Words")
+                    List(model.list) {item in
+                        Button {
+                            self.showWordDescription.toggle()
+                        } label: {
+                            Text(item.word)
+                        }
+                        .sheet(isPresented: $showWordDescription) {
+                            WordDescriptionView(word: item)
+                        }
+                    }
                 }
             }
         }
     }
+    init() {
+        model.getData()
+    }
 }
+
 
 
 // MARK: - Functions for Translating Speech
@@ -42,16 +59,10 @@ func initialiseModel() -> SinglishToText? {
 
         return model
     } catch {
-        // Do nothing
+        
     }
     return nil
 }
-
-func getSpeechPrediction(model: SinglishToText) -> String {
-    //model.prediction(audioSamples: <#T##MLShapedArray<Float>#>)
-    return "placeholder"
-}
-
 
 func speechToText() -> String {
     return "This is the translated text"
@@ -60,10 +71,10 @@ func speechToText() -> String {
 // MARK: - TextBox UI
 
 struct TextBoxView: View {
-    @State private var search: String = ""
-    
-    // Initilalise our model
-    
+    @State var input: String = ""
+    @State private var searchResult = false
+    @State var model: HistoryModel
+    @State var wordToSearch: wordData?    //@ObservedObject private var model = HistoryModel()
     
     var body: some View {
         VStack {
@@ -71,20 +82,27 @@ struct TextBoxView: View {
                 .font(.system(size: 16))
             HStack {
                 Image(systemName: "magnifyingglass")
-                TextField("enter word/phrase", text: $search)
+                TextField("enter word/phrase", text: $input)
                     .frame(height: 40)
                 Button {
-                    AVAudioSession.sharedInstance().requestRecordPermission { granted in
-                        if granted {
-                            
-                        } else {
-                            // Ask user to enable recording permissions
+                    // Do a search of the Data
+                    for item in model.list {
+                        if item.word == input.lowercased() {
+                            wordToSearch = item
                         }
                     }
+                    self.searchResult.toggle()
                 } label: {
-                    Image(systemName: "mic.fill")
+                    Text("Search!")
                 }
-
+                .sheet(isPresented: $searchResult,
+                       onDismiss: {
+                    wordToSearch = wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+                }, content: {
+                    WordDescriptionView(word: wordToSearch ?? wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+)
+                })
+                
                 
             }.padding()
                 .background(Color.white)
@@ -93,9 +111,6 @@ struct TextBoxView: View {
     }
 }
 
-// MARK: - Functions to start and stop recording
-
-//TODO
 
 
 
@@ -104,3 +119,21 @@ struct SinglishSearchPage_Previews: PreviewProvider {
         SinglishSearchPage()
     }
 }
+
+
+// This is for the recording of audio
+//Button {
+//    AVAudioSession.sharedInstance().requestRecordPermission { granted in
+//        if granted {
+//
+//        } else {
+//            // Ask user to enable recording permissions
+//        }
+//    }
+//} label: {
+//    Image(systemName: "mic.fill")
+//}
+
+// MARK: - Functions to start and stop recording
+
+//TODO
