@@ -185,23 +185,33 @@ struct ProgressBar: View {
 }
 
 struct ExplorationView: View {
+    @State private var isShowing = false
     let image: Image
     let size: CGFloat
     let caption: String
     var body: some View {
-        VStack {
-            image
-                .resizable()
-                .frame(width: size, height: 200 * (size/210))
-                .cornerRadius(20.0)
-            
-            Text(caption)
-                .font(.title3)
+        Button(action: {
+            isShowing.toggle()
+        }) {
+            VStack {
+                image
+                    .resizable()
+                    .frame(width: size, height: 200 * (size/210))
+                    .cornerRadius(20.0)
+                
+                Text(caption)
+                    .font(.title3)
+            }
+            .frame(width: 210)
+            .padding()
+            .background(Color.white)
+            .cornerRadius(20.0)
         }
-        .frame(width: 210)
-        .padding()
-        .background(Color.white)
-        .cornerRadius(20.0)
+        .sheet(isPresented: $isShowing) {
+            VStack {
+                Text("Hello")
+            }
+        }
     }
 }
 
