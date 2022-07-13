@@ -91,6 +91,7 @@ struct RegistrationCredentials {
     var password: String
     var firstName: String
     var lastName: String
+    var EXP: Int
 }
 
 protocol RegistrationService {
@@ -100,6 +101,7 @@ protocol RegistrationService {
 enum RegistrationKeys: String {
     case firstName
     case lastName
+    case EXP
 }
 
 final class RegistrationServiceImpl: RegistrationService {
@@ -120,7 +122,8 @@ final class RegistrationServiceImpl: RegistrationService {
                         if let uid = res?.user.uid {
                             
                             let values = [RegistrationKeys.firstName.rawValue: credentials.firstName,
-                                          RegistrationKeys.lastName.rawValue: credentials.lastName] as [String : Any]
+                                          RegistrationKeys.lastName.rawValue: credentials.lastName,
+                                          RegistrationKeys.EXP.rawValue: credentials.EXP] as [String : Any]
                             
                             Database
                                 .database(url: "https://singlishlah-1652625809497-default-rtdb.asia-southeast1.firebasedatabase.app")
@@ -161,7 +164,8 @@ final class RegistrationViewModelImpl: ObservableObject, RegistrationViewModel {
     @Published var newUser = RegistrationCredentials(email: "",
                                                      password: "",
                                                      firstName: "",
-                                                     lastName: "")
+                                                     lastName: "",
+                                                     EXP: 0)
     @Published var hasError: Bool = false
 
     private var subscriptions = Set<AnyCancellable>()

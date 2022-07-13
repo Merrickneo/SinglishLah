@@ -74,8 +74,5 @@
     #import <FirebaseRemoteConfig/FirebaseRemoteConfig.h>
   #endif
 
-  #if __has_include("FirebaseStorage-umbrella.h")
-    #import <FirebaseStorage/FirebaseStorage-Swift.h>
-  #endif
 
 #endif  // defined(__has_include)
