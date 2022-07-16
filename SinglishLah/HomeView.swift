@@ -73,20 +73,7 @@ struct HomeView: View {
                         .padding(.bottom)
                     }
                 }
-                //HStack {
-                  //  BottomNavBarItem(image: Image(systemName: "house.fill")) {}
-                    //BottomNavBarItem(image: Image(systemName: "magnifyingglass")) {}
-                    //BottomNavBarItem(image: Image(systemName: "book")) {}
-                    //BottomNavBarItem(image: Image(systemName: "person")) {}
-                //}
-                //.padding()
-                //.background(Color.white)
-                //.clipShape(Capsule())
-                //.padding(.horizontal)
-                //.shadow(color: Color.black.opacity(0.15), radius: 8, x: 2, y: 6)
-                //.frame(maxHeight: .infinity, alignment: .bottom)
             }
-            //.navigationTitle("SinglishLah! Home")
         }
     }
     
@@ -201,6 +188,7 @@ struct ExplorationView: View {
                 
                 Text(caption)
                     .font(.title3)
+                    .foregroundColor(.black)
             }
             .frame(width: 210)
             .padding()
@@ -209,7 +197,11 @@ struct ExplorationView: View {
         }
         .sheet(isPresented: $isShowing) {
             VStack {
-                Text("Hello")
+                image
+                    .resizable()
+                    .frame(height: 300.0)
+                    .cornerRadius(10.0)
+                HawkerView()
             }
         }
     }
@@ -261,6 +253,46 @@ struct NewView: View {
                     Text("Profile")
                 }
                 .tag(3)
+        }
+    }
+}
+
+struct HawkerView: View {
+    var body: some View {
+        VStack {
+            Text("Hawker Centre")
+                .font(.title)
+                .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+                .padding()
+            
+            
+            Text("A hawker centre or cooked food centre is an open-air complex commonly found in Singapore, offering a variety of affordable meals.")
+                .font(.subheadline)
+                .padding(.horizontal)
+            
+            Spacer()
+                .frame(height: 15.0)
+            
+            Text("Commonly Used Phrases:")
+                .font(.title2)
+                .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+                .padding(.leading)
+            
+            Spacer()
+                .frame(height: 10.0)
+            
+            Text("Tabao - Takeout instead of dining in")
+                .font(.subheadline)
+                .padding(.leading)
+                .frame(maxWidth: .infinity,  alignment: .leading)
+            
+            
+            Text("Chope a table - ‘Reserve’ the table; usually with a packet of tissue ")
+                .font(.subheadline)
+                .frame(alignment: .leading)
+            
+            Spacer()
+            
         }
     }
 }
