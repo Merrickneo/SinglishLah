@@ -8,6 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 import Firebase
+import FirebaseCore
 
 struct QuizView: View {
     var body: some View {
