@@ -11,30 +11,40 @@ import Firebase
 struct ProfileView: View {
     @EnvironmentObject var service: SessionServiceImpl
     @State var changePassword: Bool = false
+    @State var redeemVouchers: Bool = false
 
     var body: some View {
-        VStack{
-            // Change password through sending an email to the user's email
-            Button {
-                changePassword.toggle()
+        NavigationView {
+            VStack{
+                Button {
+                    redeemVouchers.toggle()
+                } label: {
+                    Text("Exchange for Vouchers")
+                }
+                .sheet(isPresented: $redeemVouchers) {
+                } content: {
+                    VoucherRedemptionView()
+                }
                 
-            } label: {
-                Text("Change Password")
+                // Change password through sending an email to the user's email
+                Button {
+                    changePassword.toggle()
+                } label: {
+                    Text("Change Password")
+                }
+                .sheet(isPresented: $changePassword) {
+                } content: {
+                    ChangePasswordView()
+                }
+                
+                Button(action: {
+                    service.logout()
+                }, label: {
+                    Text("Sign Out")
+                        .foregroundColor(Color.blue)
+                })
             }
-            .sheet(isPresented: $changePassword) {
-            } content: {
-                ChangePasswordView()
-            }
-            
-            Button(action: {
-                service.logout()
-            }, label: {
-                Text("Sign Out")
-                    .foregroundColor(Color.blue)
-            })
         }
-        
-        
     }
 }
 

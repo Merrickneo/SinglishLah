@@ -21,11 +21,14 @@ struct CartView: View {
                     Text("$\(cartManager.total).00")
                         .bold()
                 }
+                .padding()
             } else {
                 Text("Your cart is empty")
             }
         }
+        .padding(.top)
         .navigationTitle(Text("My Cart"))
+        .navigationBarBackButtonHidden(false)
     }
 }
 

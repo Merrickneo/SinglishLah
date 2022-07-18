@@ -7,7 +7,6 @@
 
 import Foundation
 import FirebaseFirestore
-import SwiftUI
 
 class HistoryModel: ObservableObject {
     @Published var list = [wordData]()

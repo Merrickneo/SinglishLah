@@ -12,7 +12,7 @@ struct VoucherRow: View {
     var voucher: Voucher
     var body: some View {
         HStack(spacing: 20) {
-            Image(systemName: "voucher_redemption")
+            Image("voucher_redemption")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50)

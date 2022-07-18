@@ -18,13 +18,6 @@ struct WordDescriptionView: View {
     }
 }
 
-struct wordData: Identifiable {
-    var id: String
-    var word: String
-    var description: String
-    // Add in example sentences later
-    // var exampleSentence: String
-}
 
 struct WordDescriptionView_Previews: PreviewProvider {
     

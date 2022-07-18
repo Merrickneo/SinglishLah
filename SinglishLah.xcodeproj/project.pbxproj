@@ -15,6 +15,7 @@
 		464E20D528854CEF00C7193D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D428854CEF00C7193D /* CartView.swift */; };
 		464E20D72885519800C7193D /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D62885519800C7193D /* CartManager.swift */; };
 		464E20D92885541900C7193D /* VoucherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D82885541900C7193D /* VoucherRow.swift */; };
+		464E20DD2885982600C7193D /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20DC2885982600C7193D /* WordData.swift */; };
 		46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */; };
 		467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467ED10C287BDA7600CF547B /* WordDescriptionView.swift */; };
 		4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */; };
@@ -71,6 +72,7 @@
 		464E20D428854CEF00C7193D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		464E20D62885519800C7193D /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		464E20D82885541900C7193D /* VoucherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRow.swift; sourceTree = "<group>"; };
+		464E20DC2885982600C7193D /* WordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageView.swift; sourceTree = "<group>"; };
 		467ED10C287BDA7600CF547B /* WordDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionView.swift; sourceTree = "<group>"; };
 		4681E27A282D0E9000E2BA60 /* SinglishLah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinglishLah.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,8 @@
 		46351A312884EC5E00EB3536 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				464E20D62885519800C7193D /* CartManager.swift */,
+				464E20DC2885982600C7193D /* WordData.swift */,
 				46351A362884F05100EB3536 /* Voucher.swift */,
 			);
 			path = Models;
@@ -188,17 +192,17 @@
 				46351A312884EC5E00EB3536 /* Models */,
 				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
+				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
 				5D277CDE28649F8100C521EE /* SignInView.swift */,
 				5D277CDC28649F4C00C521EE /* SignUpView.swift */,
 				5DFF98B6283CEE7C00B313FC /* HomeView.swift */,
 				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
+				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
+				467ED10C287BDA7600CF547B /* WordDescriptionView.swift */,
+				469D23EC287714230049E0C2 /* HistoryView.swift */,
 				5DF62FFD28828C0F00FA08C1 /* QuizView.swift */,
 				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
 				4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */,
-				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
-				467ED10C287BDA7600CF547B /* WordDescriptionView.swift */,
-				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
-				469D23EC287714230049E0C2 /* HistoryView.swift */,
 				464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */,
 				464E20D428854CEF00C7193D /* CartView.swift */,
 				46CCE26B28524AF100FCE0D7 /* Info.plist */,
@@ -207,7 +211,6 @@
 				46D3847F2868180900081F1E /* SinglishToText.mlproj */,
 				4681E281282D0E9300E2BA60 /* Assets.xcassets */,
 				4681E283282D0E9300E2BA60 /* Preview Content */,
-				464E20D62885519800C7193D /* CartManager.swift */,
 			);
 			path = SinglishLah;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */,
 				5DF62FFE28828C0F00FA08C1 /* QuizView.swift in Sources */,
 				4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */,
+				464E20DD2885982600C7193D /* WordData.swift in Sources */,
 				464E20D528854CEF00C7193D /* CartView.swift in Sources */,
 				464E20D92885541900C7193D /* VoucherRow.swift in Sources */,
 				5D277CDF28649F8100C521EE /* SignInView.swift in Sources */,
