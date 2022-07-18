@@ -111,9 +111,6 @@ struct TextBoxView: View {
     }
 }
 
-
-
-
 struct SinglishSearchPage_Previews: PreviewProvider {
     static var previews: some View {
         SinglishSearchPage()
