@@ -92,6 +92,7 @@ struct RegistrationCredentials {
     var firstName: String
     var lastName: String
     var EXP: Int
+    var Vouchers: [Int: Int] = [5: 0, 10: 0, 15: 0, 20: 0]
 }
 
 protocol RegistrationService {
@@ -102,6 +103,7 @@ enum RegistrationKeys: String {
     case firstName
     case lastName
     case EXP
+    case Vouchers
 }
 
 final class RegistrationServiceImpl: RegistrationService {
@@ -124,6 +126,8 @@ final class RegistrationServiceImpl: RegistrationService {
                             let values = [RegistrationKeys.firstName.rawValue: credentials.firstName,
                                           RegistrationKeys.lastName.rawValue: credentials.lastName,
                                           RegistrationKeys.EXP.rawValue: credentials.EXP] as [String : Any]
+                                          // RegistrationKeys.Vouchers.rawValue: credentials.Vouchers]
+                                        
                             
                             Database
                                 .database(url: "https://singlishlah-1652625809497-default-rtdb.asia-southeast1.firebasedatabase.app")

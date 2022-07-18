@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-class HistoryModel: ObservableObject {
+class WordDatabase: ObservableObject {
     @Published var list = [wordData]()
     
     // MARK: - Getting data from Firestore database

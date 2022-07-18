@@ -16,7 +16,7 @@ import AVKit
 
 struct SinglishSearchPage: View {
     @State var searchWord: String = ""
-    @ObservedObject var model = HistoryModel()
+    @ObservedObject var model = WordDatabase()
     @State private var showWordDescription = false
     
     var body: some View {
@@ -73,8 +73,8 @@ func speechToText() -> String {
 struct TextBoxView: View {
     @State var input: String = ""
     @State private var searchResult = false
-    @State var model: HistoryModel
-    @State var wordToSearch: wordData?    //@ObservedObject private var model = HistoryModel()
+    @State var model: WordDatabase
+    @State var wordToSearch: wordData?
     
     var body: some View {
         VStack {

@@ -16,6 +16,8 @@
 		464E20D72885519800C7193D /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D62885519800C7193D /* CartManager.swift */; };
 		464E20D92885541900C7193D /* VoucherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D82885541900C7193D /* VoucherRow.swift */; };
 		464E20DD2885982600C7193D /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20DC2885982600C7193D /* WordData.swift */; };
+		464E20E12885AE1C00C7193D /* WordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20E02885AE1C00C7193D /* WordDatabase.swift */; };
+		464E20E52885B51C00C7193D /* GrowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20E42885B51C00C7193D /* GrowingButton.swift */; };
 		46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */; };
 		467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467ED10C287BDA7600CF547B /* WordDescriptionView.swift */; };
 		4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */; };
@@ -26,7 +28,6 @@
 		4681E299282D0E9300E2BA60 /* SinglishLahUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E298282D0E9300E2BA60 /* SinglishLahUITests.swift */; };
 		4681E29B282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E29A282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift */; };
 		4689C465287DAF7300B71BC2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */; };
-		469D23ED287714230049E0C2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469D23EC287714230049E0C2 /* HistoryView.swift */; };
 		46CCE26A2852496B00FCE0D7 /* SinglishSearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */; };
 		46D3847D286817CE00081F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46D3847C286817CE00081F1E /* GoogleService-Info.plist */; };
 		46D384802868180900081F1E /* SinglishToText.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 46D3847E2868180900081F1E /* SinglishToText.mlmodel */; };
@@ -73,6 +74,8 @@
 		464E20D62885519800C7193D /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		464E20D82885541900C7193D /* VoucherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRow.swift; sourceTree = "<group>"; };
 		464E20DC2885982600C7193D /* WordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
+		464E20E02885AE1C00C7193D /* WordDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDatabase.swift; sourceTree = "<group>"; };
+		464E20E42885B51C00C7193D /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
 		46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageView.swift; sourceTree = "<group>"; };
 		467ED10C287BDA7600CF547B /* WordDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionView.swift; sourceTree = "<group>"; };
 		4681E27A282D0E9000E2BA60 /* SinglishLah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinglishLah.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +90,6 @@
 		4681E29A282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglishLahUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4681E2A8282D11DE00E2BA60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
-		469D23EC287714230049E0C2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglishSearchPage.swift; sourceTree = "<group>"; };
 		46CCE26B28524AF100FCE0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46D3847C286817CE00081F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -148,6 +150,8 @@
 				464E20D62885519800C7193D /* CartManager.swift */,
 				464E20DC2885982600C7193D /* WordData.swift */,
 				46351A362884F05100EB3536 /* Voucher.swift */,
+				464E20E02885AE1C00C7193D /* WordDatabase.swift */,
+				464E20E42885B51C00C7193D /* GrowingButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,7 +203,6 @@
 				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
 				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
 				467ED10C287BDA7600CF547B /* WordDescriptionView.swift */,
-				469D23EC287714230049E0C2 /* HistoryView.swift */,
 				5DF62FFD28828C0F00FA08C1 /* QuizView.swift */,
 				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
 				4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */,
@@ -530,7 +533,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				46CCE26A2852496B00FCE0D7 /* SinglishSearchPage.swift in Sources */,
-				469D23ED287714230049E0C2 /* HistoryView.swift in Sources */,
 				5DF9E3E4286458ED00EF5CAC /* ProfileView.swift in Sources */,
 				46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */,
 				46D384802868180900081F1E /* SinglishToText.mlmodel in Sources */,
@@ -546,8 +548,10 @@
 				46351A352884EFBE00EB3536 /* VoucherCard.swift in Sources */,
 				467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */,
 				5DF62FFE28828C0F00FA08C1 /* QuizView.swift in Sources */,
+				464E20E52885B51C00C7193D /* GrowingButton.swift in Sources */,
 				4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */,
 				464E20DD2885982600C7193D /* WordData.swift in Sources */,
+				464E20E12885AE1C00C7193D /* WordDatabase.swift in Sources */,
 				464E20D528854CEF00C7193D /* CartView.swift in Sources */,
 				464E20D92885541900C7193D /* VoucherRow.swift in Sources */,
 				5D277CDF28649F8100C521EE /* SignInView.swift in Sources */,
