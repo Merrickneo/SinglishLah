@@ -9,18 +9,19 @@ import SwiftUI
 
 struct VoucherRedemptionView: View {
     @StateObject var cartManager = CartManager()
-    private var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
+    var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(voucherList, id: \.id) { voucher in
                         VoucherCard(voucher: voucher)
+                            .environmentObject(cartManager)
                     }
                 }
                 .padding()
             }
-            .navigationTitle(Text("Exchange for Vouchers!"))
+            .navigationTitle(Text("Redeem vouchers!"))
             .toolbar {
                 NavigationLink {
                     CartView()
@@ -30,6 +31,7 @@ struct VoucherRedemptionView: View {
                 }
             }
         }
+        .navigationBarHidden(true)
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

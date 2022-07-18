@@ -7,9 +7,8 @@
 
 import Foundation
 import FirebaseFirestore
-import SwiftUI
 
-class HistoryModel: ObservableObject {
+class WordDatabase: ObservableObject {
     @Published var list = [wordData]()
     
     // MARK: - Getting data from Firestore database

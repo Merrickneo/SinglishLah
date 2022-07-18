@@ -125,7 +125,12 @@ final class RegistrationServiceImpl: RegistrationService {
                             
                             let values = [RegistrationKeys.firstName.rawValue: credentials.firstName,
                                           RegistrationKeys.lastName.rawValue: credentials.lastName,
+
                                           RegistrationKeys.EXP.rawValue: credentials.EXP, RegistrationKeys.Vouchers.rawValue: credentials.Vouchers] as [AnyHashable : Any]
+
+
+                                        
+
                             
                             Database
                                 .database(url: "https://singlishlah-1652625809497-default-rtdb.asia-southeast1.firebasedatabase.app")
