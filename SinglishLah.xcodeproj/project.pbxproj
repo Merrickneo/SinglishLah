@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		46272E4BF1CE84B72A183C83 /* Pods_SinglishLah_SinglishLahUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C9CF21CBF5368CEFDB422B /* Pods_SinglishLah_SinglishLahUITests.framework */; };
 		46351A352884EFBE00EB3536 /* VoucherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46351A342884EFBE00EB3536 /* VoucherCard.swift */; };
-		46351A372884F05100EB3536 /* Voucher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46351A362884F05100EB3536 /* Voucher.swift */; };
 		464E20B02885475F00C7193D /* VoucherRedemptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */; };
 		464E20D328854BBD00C7193D /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D228854BBD00C7193D /* CartButton.swift */; };
 		464E20D528854CEF00C7193D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D428854CEF00C7193D /* CartView.swift */; };
-		464E20D72885519800C7193D /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D62885519800C7193D /* CartManager.swift */; };
 		464E20D92885541900C7193D /* VoucherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D82885541900C7193D /* VoucherRow.swift */; };
 		46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */; };
 		467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467ED10C287BDA7600CF547B /* WordDescriptionView.swift */; };
@@ -65,11 +63,9 @@
 		30ED97C4F0287756A1BAB914 /* Pods-SinglishLah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinglishLah.debug.xcconfig"; path = "Target Support Files/Pods-SinglishLah/Pods-SinglishLah.debug.xcconfig"; sourceTree = "<group>"; };
 		32C9CF21CBF5368CEFDB422B /* Pods_SinglishLah_SinglishLahUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinglishLah_SinglishLahUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46351A342884EFBE00EB3536 /* VoucherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCard.swift; sourceTree = "<group>"; };
-		46351A362884F05100EB3536 /* Voucher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voucher.swift; sourceTree = "<group>"; };
 		464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRedemptionView.swift; sourceTree = "<group>"; };
 		464E20D228854BBD00C7193D /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		464E20D428854CEF00C7193D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
-		464E20D62885519800C7193D /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		464E20D82885541900C7193D /* VoucherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRow.swift; sourceTree = "<group>"; };
 		46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageView.swift; sourceTree = "<group>"; };
 		467ED10C287BDA7600CF547B /* WordDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionView.swift; sourceTree = "<group>"; };
@@ -140,14 +136,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46351A312884EC5E00EB3536 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				46351A362884F05100EB3536 /* Voucher.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		464E20D128854B9800C7193D /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				464E20D128854B9800C7193D /* Components */,
-				46351A312884EC5E00EB3536 /* Models */,
 				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
 				5D277CDE28649F8100C521EE /* SignInView.swift */,
@@ -207,7 +194,6 @@
 				46D3847F2868180900081F1E /* SinglishToText.mlproj */,
 				4681E281282D0E9300E2BA60 /* Assets.xcassets */,
 				4681E283282D0E9300E2BA60 /* Preview Content */,
-				464E20D62885519800C7193D /* CartManager.swift */,
 			);
 			path = SinglishLah;
 			sourceTree = "<group>";
@@ -531,10 +517,8 @@
 				5DF9E3E4286458ED00EF5CAC /* ProfileView.swift in Sources */,
 				46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */,
 				46D384802868180900081F1E /* SinglishToText.mlmodel in Sources */,
-				464E20D72885519800C7193D /* CartManager.swift in Sources */,
 				464E20D328854BBD00C7193D /* CartButton.swift in Sources */,
 				4681E280282D0E9000E2BA60 /* ContentView.swift in Sources */,
-				46351A372884F05100EB3536 /* Voucher.swift in Sources */,
 				4689C465287DAF7300B71BC2 /* ChangePasswordView.swift in Sources */,
 				5D3BDA662858DA2100C9C5F3 /* TabHomeView.swift in Sources */,
 				464E20B02885475F00C7193D /* VoucherRedemptionView.swift in Sources */,
