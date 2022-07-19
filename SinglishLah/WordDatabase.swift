@@ -4,7 +4,6 @@
 //
 //  Created by Merrick Neo on 7/7/22.
 //
-
 import Foundation
 import FirebaseFirestore
 
@@ -49,4 +48,3 @@ class WordDatabase: ObservableObject {
     }
             
 }
-

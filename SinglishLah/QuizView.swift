@@ -223,7 +223,7 @@ class QuestionViewModel: ObservableObject {
         let db = Firestore.firestore()
         db.collection("Questions").getDocuments { (snap, err) in
             guard let data = snap else{return}
-            
+            /*
             DispatchQueue.main.async {
 
                 self.questions = data.documents.compactMap({ (doc) -> Question? in
@@ -231,7 +231,7 @@ class QuestionViewModel: ObservableObject {
                     
                 })
             }
-            
+            */
             print(self.questions)
         }
     }
