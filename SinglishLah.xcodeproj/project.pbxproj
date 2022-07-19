@@ -15,7 +15,6 @@
 		464E20D92885541900C7193D /* VoucherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D82885541900C7193D /* VoucherRow.swift */; };
 		46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */; };
 		467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467ED10C287BDA7600CF547B /* WordDescriptionView.swift */; };
-		4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */; };
 		4681E280282D0E9000E2BA60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E27F282D0E9000E2BA60 /* ContentView.swift */; };
 		4681E282282D0E9300E2BA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4681E281282D0E9300E2BA60 /* Assets.xcassets */; };
 		4681E285282D0E9300E2BA60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4681E284282D0E9300E2BA60 /* Preview Assets.xcassets */; };
@@ -75,7 +74,6 @@
 		46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageView.swift; sourceTree = "<group>"; };
 		467ED10C287BDA7600CF547B /* WordDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDescriptionView.swift; sourceTree = "<group>"; };
 		4681E27A282D0E9000E2BA60 /* SinglishLah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinglishLah.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglishLahApp.swift; sourceTree = "<group>"; };
 		4681E27F282D0E9000E2BA60 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4681E281282D0E9300E2BA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4681E284282D0E9300E2BA60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		4681E27C282D0E9000E2BA60 /* SinglishLah */ = {
 			isa = PBXGroup;
 			children = (
-				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				464E20D128854B9800C7193D /* Components */,
 				5D4340ED2885D1CC00AE8229 /* Models */,
 				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
@@ -552,7 +549,6 @@
 				467ED10D287BDA7600CF547B /* WordDescriptionView.swift in Sources */,
 				5D4341062885D78D00AE8229 /* WordData.swift in Sources */,
 				5DF62FFE28828C0F00FA08C1 /* QuizView.swift in Sources */,
-				4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */,
 				5D4341042885D78D00AE8229 /* CartManager.swift in Sources */,
 				464E20D528854CEF00C7193D /* CartView.swift in Sources */,
 				5D4341082885D78D00AE8229 /* WordDatabase.swift in Sources */,
