@@ -30,7 +30,6 @@
 		5D277CDD28649F4C00C521EE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D277CDC28649F4C00C521EE /* SignUpView.swift */; };
 		5D277CDF28649F8100C521EE /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D277CDE28649F8100C521EE /* SignInView.swift */; };
 		5D3BDA662858DA2100C9C5F3 /* TabHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */; };
-		5D4340EE2885D1CC00AE8229 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 5D4340ED2885D1CC00AE8229 /* Models */; };
 		5D4341042885D78D00AE8229 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341032885D78D00AE8229 /* CartManager.swift */; };
 		5D4341052885D78D00AE8229 /* Voucher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341022885D78D00AE8229 /* Voucher.swift */; };
 		5D4341062885D78D00AE8229 /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341012885D78D00AE8229 /* WordData.swift */; };
@@ -94,7 +93,6 @@
 		5D277CDC28649F4C00C521EE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5D277CDE28649F8100C521EE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabHomeView.swift; sourceTree = "<group>"; };
-		5D4340ED2885D1CC00AE8229 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		5D4340FF2885D78D00AE8229 /* WordDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDatabase.swift; sourceTree = "<group>"; };
 		5D4341002885D78D00AE8229 /* GrowingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButton.swift; sourceTree = "<group>"; };
 		5D4341012885D78D00AE8229 /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
@@ -146,9 +144,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		461650A92886B9030057758C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D4341022885D78D00AE8229 /* Voucher.swift */,
+				5D4341012885D78D00AE8229 /* WordData.swift */,
+				5D4340FF2885D78D00AE8229 /* WordDatabase.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		461650AA2886B94F0057758C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
+				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
+				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
+				5D277CDE28649F8100C521EE /* SignInView.swift */,
+				5D4341032885D78D00AE8229 /* CartManager.swift */,
+				5D277CDC28649F4C00C521EE /* SignUpView.swift */,
+				5DFF98B6283CEE7C00B313FC /* HomeView.swift */,
+				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
+				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
+				467ED10C287BDA7600CF547B /* WordDescriptionView.swift */,
+				5DF62FFD28828C0F00FA08C1 /* QuizView.swift */,
+				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
+				4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */,
+				464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */,
+				464E20D428854CEF00C7193D /* CartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		461650AB2886B9600057758C /* Machine Learning */ = {
+			isa = PBXGroup;
+			children = (
+				46D3847E2868180900081F1E /* SinglishToText.mlmodel */,
+				46D3847F2868180900081F1E /* SinglishToText.mlproj */,
+			);
+			path = "Machine Learning";
+			sourceTree = "<group>";
+		};
 		464E20D128854B9800C7193D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5D4341002885D78D00AE8229 /* GrowingButton.swift */,
 				46351A342884EFBE00EB3536 /* VoucherCard.swift */,
 				464E20D228854BBD00C7193D /* CartButton.swift */,
 				464E20D82885541900C7193D /* VoucherRow.swift */,
@@ -183,31 +223,12 @@
 		4681E27C282D0E9000E2BA60 /* SinglishLah */ = {
 			isa = PBXGroup;
 			children = (
+				461650AB2886B9600057758C /* Machine Learning */,
+				461650AA2886B94F0057758C /* Views */,
+				461650A92886B9030057758C /* Models */,
 				464E20D128854B9800C7193D /* Components */,
-				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
-				5D4340ED2885D1CC00AE8229 /* Models */,
-				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
-				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
-				5D277CDE28649F8100C521EE /* SignInView.swift */,
-				5D4341032885D78D00AE8229 /* CartManager.swift */,
-				5D4341002885D78D00AE8229 /* GrowingButton.swift */,
-				5D4341022885D78D00AE8229 /* Voucher.swift */,
-				5D4341012885D78D00AE8229 /* WordData.swift */,
-				5D4340FF2885D78D00AE8229 /* WordDatabase.swift */,
-				5D277CDC28649F4C00C521EE /* SignUpView.swift */,
-				5DFF98B6283CEE7C00B313FC /* HomeView.swift */,
-				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
-				46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */,
-				467ED10C287BDA7600CF547B /* WordDescriptionView.swift */,
-				5DF62FFD28828C0F00FA08C1 /* QuizView.swift */,
-				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
-				4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */,
-				464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */,
-				464E20D428854CEF00C7193D /* CartView.swift */,
 				46CCE26B28524AF100FCE0D7 /* Info.plist */,
 				46D3847C286817CE00081F1E /* GoogleService-Info.plist */,
-				46D3847E2868180900081F1E /* SinglishToText.mlmodel */,
-				46D3847F2868180900081F1E /* SinglishToText.mlproj */,
 				4681E281282D0E9300E2BA60 /* Assets.xcassets */,
 				4681E283282D0E9300E2BA60 /* Preview Content */,
 			);
@@ -370,7 +391,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D4340EE2885D1CC00AE8229 /* Models in Resources */,
 				46D384812868180900081F1E /* SinglishToText.mlproj in Resources */,
 				4681E285282D0E9300E2BA60 /* Preview Assets.xcassets in Resources */,
 				46D3847D286817CE00081F1E /* GoogleService-Info.plist in Resources */,
