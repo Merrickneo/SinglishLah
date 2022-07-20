@@ -12,6 +12,7 @@ target 'SinglishLah' do
   pod 'FirebaseAuth'
   pod 'FirebaseStorage'
   pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '8.11.0'
+  
 
 
 

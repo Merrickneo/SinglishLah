@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8215179292AFDD4542DE514DE0B67ACD"
-               BuildableName = "Pods_SinglishLah.framework"
-               BlueprintName = "Pods-SinglishLah"
+               BlueprintIdentifier = "DBA2B63E3A5FE83FE89E731664C9269F"
+               BuildableName = "FirebaseFirestore"
+               BlueprintName = "FirebaseFirestore"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
