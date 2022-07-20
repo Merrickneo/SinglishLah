@@ -29,7 +29,7 @@ struct TabHomeView: View {
                 }
                 .tag(1)
          
-            Text("Learn Tab")
+            QuizView()
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
                     Image(systemName: "video.circle.fill")

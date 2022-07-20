@@ -56,7 +56,7 @@ struct MainQuiz: View {
                             .fontWeight(.heavy)
                             .foregroundColor(.black)
                         
-                        Text("LEVEL \(index)")
+                        Text("Quiz \(index)")
                             .foregroundColor(.black)
                     }
                     .padding()
@@ -218,20 +218,31 @@ struct Question: Identifiable, Codable {
 }
 
 class QuestionViewModel: ObservableObject {
-    @Published var questions : [Question] = []
+    
+    @Published var questions = [Question]()
+    
     func getQuestions(set: String) {
+        
         let db = Firestore.firestore()
-        db.collection("Questions").getDocuments { (snap, err) in
-            guard let data = snap else{return}
-            /*
-            DispatchQueue.main.async {
-
-                self.questions = data.documents.compactMap({ (doc) -> Question? in
-                    return try? doc.data(as: Question.self)
-                    
-                })
+        
+        db.collection("Questions").addSnapshotListener { (snap, err) in
+            guard let documents = snap?.documents else {
+                return
             }
-            */
+
+            self.questions = documents.compactMap({ (doc) -> Question in
+                let data = doc.data()
+                let idee = data["id"] as? String ?? ""
+                let question = data["question"] as? String ?? ""
+                let optionA = data["a"] as? String ?? ""
+                let optionB = data["b"] as? String ?? ""
+                let optionC = data["c"] as? String ?? ""
+                let answer = data["answer"] as? String ?? ""
+                return Question(id: idee, question: question, optionA: optionA, optionB: optionB, optionC: optionC, answer: answer)
+                    
+            })
+            
+            
             print(self.questions)
         }
     }
