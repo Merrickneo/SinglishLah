@@ -24,7 +24,6 @@
 		4681E29B282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681E29A282D0E9300E2BA60 /* SinglishLahUITestsLaunchTests.swift */; };
 		4689C465287DAF7300B71BC2 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */; };
 		46CCE26A2852496B00FCE0D7 /* SinglishSearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */; };
-		46D3847D286817CE00081F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46D3847C286817CE00081F1E /* GoogleService-Info.plist */; };
 		46D384802868180900081F1E /* SinglishToText.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 46D3847E2868180900081F1E /* SinglishToText.mlmodel */; };
 		46D384812868180900081F1E /* SinglishToText.mlproj in Resources */ = {isa = PBXBuildFile; fileRef = 46D3847F2868180900081F1E /* SinglishToText.mlproj */; };
 		5D277CDD28649F4C00C521EE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D277CDC28649F4C00C521EE /* SignUpView.swift */; };
@@ -35,6 +34,7 @@
 		5D4341062885D78D00AE8229 /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341012885D78D00AE8229 /* WordData.swift */; };
 		5D4341072885D78D00AE8229 /* GrowingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4341002885D78D00AE8229 /* GrowingButton.swift */; };
 		5D4341082885D78D00AE8229 /* WordDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4340FF2885D78D00AE8229 /* WordDatabase.swift */; };
+		5D9661902888333000DFE4B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D96618F2888333000DFE4B5 /* GoogleService-Info.plist */; };
 		5DF62FFE28828C0F00FA08C1 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF62FFD28828C0F00FA08C1 /* QuizView.swift */; };
 		5DF9E3E4286458ED00EF5CAC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */; };
 		5DFF98B7283CEE7C00B313FC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFF98B6283CEE7C00B313FC /* HomeView.swift */; };
@@ -87,7 +87,6 @@
 		4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		46CCE2692852496B00FCE0D7 /* SinglishSearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglishSearchPage.swift; sourceTree = "<group>"; };
 		46CCE26B28524AF100FCE0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46D3847C286817CE00081F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46D3847E2868180900081F1E /* SinglishToText.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SinglishToText.mlmodel; sourceTree = "<group>"; };
 		46D3847F2868180900081F1E /* SinglishToText.mlproj */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SinglishToText.mlproj; sourceTree = "<group>"; };
 		5D277CDC28649F4C00C521EE /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		5D4341012885D78D00AE8229 /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		5D4341022885D78D00AE8229 /* Voucher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voucher.swift; sourceTree = "<group>"; };
 		5D4341032885D78D00AE8229 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		5D96618F2888333000DFE4B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DD47C5BBD8F9BDCB8FA9D43 /* Pods_SinglishLahTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinglishLahTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF62FFD28828C0F00FA08C1 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 				461650A92886B9030057758C /* Models */,
 				464E20D128854B9800C7193D /* Components */,
 				46CCE26B28524AF100FCE0D7 /* Info.plist */,
-				46D3847C286817CE00081F1E /* GoogleService-Info.plist */,
+				5D96618F2888333000DFE4B5 /* GoogleService-Info.plist */,
 				4681E281282D0E9300E2BA60 /* Assets.xcassets */,
 				4681E283282D0E9300E2BA60 /* Preview Content */,
 			);
@@ -393,7 +393,7 @@
 			files = (
 				46D384812868180900081F1E /* SinglishToText.mlproj in Resources */,
 				4681E285282D0E9300E2BA60 /* Preview Assets.xcassets in Resources */,
-				46D3847D286817CE00081F1E /* GoogleService-Info.plist in Resources */,
+				5D9661902888333000DFE4B5 /* GoogleService-Info.plist in Resources */,
 				4681E282282D0E9300E2BA60 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

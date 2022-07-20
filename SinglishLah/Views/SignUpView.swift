@@ -92,7 +92,7 @@ struct RegistrationCredentials {
     var firstName: String
     var lastName: String
     var EXP: Int
-    var Vouchers: [Int: Int] = [5: 0, 10: 0, 15: 0, 20: 0]
+    var Vouchers: [String: Int] = ["5": 0, "10": 0, "15": 0, "20": 0]
 }
 
 protocol RegistrationService {
@@ -126,7 +126,7 @@ final class RegistrationServiceImpl: RegistrationService {
                             let values = [RegistrationKeys.firstName.rawValue: credentials.firstName,
                                           RegistrationKeys.lastName.rawValue: credentials.lastName,
 
-                                          RegistrationKeys.EXP.rawValue: credentials.EXP, RegistrationKeys.Vouchers.rawValue: credentials.Vouchers] as [AnyHashable : Any]
+                                          RegistrationKeys.EXP.rawValue: credentials.EXP, RegistrationKeys.Vouchers.rawValue: credentials.Vouchers] as [String : Any]
 
 
                                         
