@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46272E4BF1CE84B72A183C83 /* Pods_SinglishLah_SinglishLahUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C9CF21CBF5368CEFDB422B /* Pods_SinglishLah_SinglishLahUITests.framework */; };
+		462DFD27288850AF00371A4D /* VoucherFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462DFD26288850AF00371A4D /* VoucherFlipView.swift */; };
 		46351A352884EFBE00EB3536 /* VoucherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46351A342884EFBE00EB3536 /* VoucherCard.swift */; };
 		464E20B02885475F00C7193D /* VoucherRedemptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */; };
 		464E20D328854BBD00C7193D /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D228854BBD00C7193D /* CartButton.swift */; };
@@ -66,6 +67,7 @@
 		248828F0DE4D9C5212179E09 /* Pods-SinglishLahTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinglishLahTests.release.xcconfig"; path = "Target Support Files/Pods-SinglishLahTests/Pods-SinglishLahTests.release.xcconfig"; sourceTree = "<group>"; };
 		30ED97C4F0287756A1BAB914 /* Pods-SinglishLah.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinglishLah.debug.xcconfig"; path = "Target Support Files/Pods-SinglishLah/Pods-SinglishLah.debug.xcconfig"; sourceTree = "<group>"; };
 		32C9CF21CBF5368CEFDB422B /* Pods_SinglishLah_SinglishLahUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinglishLah_SinglishLahUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		462DFD26288850AF00371A4D /* VoucherFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherFlipView.swift; sourceTree = "<group>"; };
 		46351A342884EFBE00EB3536 /* VoucherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCard.swift; sourceTree = "<group>"; };
 		464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRedemptionView.swift; sourceTree = "<group>"; };
 		464E20D228854BBD00C7193D /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
@@ -147,9 +149,11 @@
 		461650A92886B9030057758C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5D4341032885D78D00AE8229 /* CartManager.swift */,
 				5D4341022885D78D00AE8229 /* Voucher.swift */,
 				5D4341012885D78D00AE8229 /* WordData.swift */,
 				5D4340FF2885D78D00AE8229 /* WordDatabase.swift */,
+				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,11 +161,9 @@
 		461650AA2886B94F0057758C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				46552E25283224BB00F6CFB0 /* RegistrationPageView.swift */,
 				4681E27F282D0E9000E2BA60 /* ContentView.swift */,
 				5D277CDE28649F8100C521EE /* SignInView.swift */,
-				5D4341032885D78D00AE8229 /* CartManager.swift */,
 				5D277CDC28649F4C00C521EE /* SignUpView.swift */,
 				5DFF98B6283CEE7C00B313FC /* HomeView.swift */,
 				5D3BDA652858DA2100C9C5F3 /* TabHomeView.swift */,
@@ -171,6 +173,7 @@
 				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
 				4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */,
 				464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */,
+				462DFD26288850AF00371A4D /* VoucherFlipView.swift */,
 				464E20D428854CEF00C7193D /* CartView.swift */,
 			);
 			path = Views;
@@ -574,6 +577,7 @@
 				5DF62FFE28828C0F00FA08C1 /* QuizView.swift in Sources */,
 				4681E27E282D0E9000E2BA60 /* SinglishLahApp.swift in Sources */,
 				5D4341042885D78D00AE8229 /* CartManager.swift in Sources */,
+				462DFD27288850AF00371A4D /* VoucherFlipView.swift in Sources */,
 				464E20D528854CEF00C7193D /* CartView.swift in Sources */,
 				5D4341082885D78D00AE8229 /* WordDatabase.swift in Sources */,
 				464E20D92885541900C7193D /* VoucherRow.swift in Sources */,
