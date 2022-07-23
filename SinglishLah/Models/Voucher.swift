@@ -12,6 +12,13 @@ struct Voucher: Identifiable {
     var name: String
     var image = "voucher_redemption"
     var amount: Int
+    var back_image: String
+
+    init(name: String, amount: Int) {
+        self.name = name
+        self.amount = amount
+        self.back_image = "qr_code_" + String(amount)
+    }
 }
 
 var voucherList = [Voucher(name: "$5 dollars", amount: 5),
