@@ -11,6 +11,8 @@
 		462DFD27288850AF00371A4D /* VoucherFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462DFD26288850AF00371A4D /* VoucherFlipView.swift */; };
 		46351A352884EFBE00EB3536 /* VoucherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46351A342884EFBE00EB3536 /* VoucherCard.swift */; };
 		464874BE288C3573006A2050 /* SearchedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464874BD288C3573006A2050 /* SearchedWords.swift */; };
+		464874C0288D48F1006A2050 /* RedeemVouchersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464874BF288D48F1006A2050 /* RedeemVouchersView.swift */; };
+		464874C2288D4948006A2050 /* VoucherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464874C1288D4948006A2050 /* VoucherManager.swift */; };
 		464E20B02885475F00C7193D /* VoucherRedemptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */; };
 		464E20D328854BBD00C7193D /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D228854BBD00C7193D /* CartButton.swift */; };
 		464E20D528854CEF00C7193D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D428854CEF00C7193D /* CartView.swift */; };
@@ -71,6 +73,8 @@
 		462DFD26288850AF00371A4D /* VoucherFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherFlipView.swift; sourceTree = "<group>"; };
 		46351A342884EFBE00EB3536 /* VoucherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCard.swift; sourceTree = "<group>"; };
 		464874BD288C3573006A2050 /* SearchedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedWords.swift; sourceTree = "<group>"; };
+		464874BF288D48F1006A2050 /* RedeemVouchersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemVouchersView.swift; sourceTree = "<group>"; };
+		464874C1288D4948006A2050 /* VoucherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherManager.swift; sourceTree = "<group>"; };
 		464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRedemptionView.swift; sourceTree = "<group>"; };
 		464E20D228854BBD00C7193D /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		464E20D428854CEF00C7193D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				5D4340FF2885D78D00AE8229 /* WordDatabase.swift */,
 				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
 				464874BD288C3573006A2050 /* SearchedWords.swift */,
+				464874C1288D4948006A2050 /* VoucherManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				464E20D428854CEF00C7193D /* CartView.swift */,
 				464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */,
 				462DFD26288850AF00371A4D /* VoucherFlipView.swift */,
+				464874BF288D48F1006A2050 /* RedeemVouchersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -584,9 +590,11 @@
 				462DFD27288850AF00371A4D /* VoucherFlipView.swift in Sources */,
 				464E20D528854CEF00C7193D /* CartView.swift in Sources */,
 				5D4341082885D78D00AE8229 /* WordDatabase.swift in Sources */,
+				464874C2288D4948006A2050 /* VoucherManager.swift in Sources */,
 				464E20D92885541900C7193D /* VoucherRow.swift in Sources */,
 				5D277CDF28649F8100C521EE /* SignInView.swift in Sources */,
 				5D4341072885D78D00AE8229 /* GrowingButton.swift in Sources */,
+				464874C0288D48F1006A2050 /* RedeemVouchersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
