@@ -20,6 +20,11 @@ struct VoucherRedemptionView: View {
                     }
                 }
                 .padding()
+                
+                Image("redeem_voucher")
+                    .resizable()
+                    .frame(width:75, height: 75)
+                    .position(x: 380, y: 150)
             }
             .navigationTitle(Text("Redeem vouchers!"))
             .toolbar {
