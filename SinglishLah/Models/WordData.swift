@@ -7,10 +7,21 @@
 
 import Foundation
 
-struct wordData: Identifiable {
+class wordData: Identifiable {
     var id: String
     var word: String
     var description: String
-    // Add in example sentences later
-    // var exampleSentence: String
+    var example: String
+    @Published var searched: Bool
+    
+    func toggleSearched() {
+        self.searched = true
+    }
+    init (id: String, word: String, description: String, example: String, searched: Bool) {
+        self.id = id
+        self.word = word
+        self.description = description
+        self.example = example
+        self.searched = searched
+    }
 }

@@ -5,19 +5,19 @@
 //  Created by Merrick Neo on 9/6/22.
 //
 
-import AVFoundation
 import Foundation
 import Speech
 import SwiftUI
 import FirebaseCore
 import FirebaseFirestore
 import CoreML
-import AVKit
+import AVFAudio
 
 struct SinglishSearchPage: View {
     @State var searchWord: String = ""
     @ObservedObject var model = WordDatabase()
     @State private var showWordDescription = false
+    @StateObject var searchHistory = SearchHistory()
     
     var body: some View {
         NavigationView{
@@ -25,18 +25,26 @@ struct SinglishSearchPage: View {
                 Color("Bg")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    TextBoxView(model: model)
+                    TextBoxView()
                         .padding()
+                        .environmentObject(model)
+                        .environmentObject(searchHistory)
                     // Get from history last 3 words
-                    Text("Saved Words")
+                    Text("Searched Words")
+
+                    // To be updated later
+                    HistoryOfWords().environmentObject(searchHistory)
+                    
                     List(model.list) {item in
-                        Button {
-                            self.showWordDescription.toggle()
-                        } label: {
-                            Text(item.word)
-                        }
-                        .sheet(isPresented: $showWordDescription) {
-                            WordDescriptionView(word: item)
+                        if item.searched == true {
+                            Button {
+                                self.showWordDescription.toggle()
+                            } label: {
+                                Text(item.word)
+                            }
+                            .sheet(isPresented: $showWordDescription) {
+                                WordDescriptionView(word: item)
+                            }
                         }
                     }
                 }
@@ -49,6 +57,27 @@ struct SinglishSearchPage: View {
 }
 
 
+struct HistoryOfWords: View {
+    @EnvironmentObject var searchHistory: SearchHistory
+    @State private var showWordDescription: Bool = false
+    
+    var body: some View {
+        if searchHistory.searchedWords.count > 0 {
+            ScrollView {
+                ForEach(searchHistory.searchedWords, id: \.id) { item in
+                    Button {
+                        self.showWordDescription.toggle()
+                    } label: {
+                        Text(item.word)
+                    }
+                    .sheet(isPresented: $showWordDescription) {
+                        WordDescriptionView(word: item)
+                    }
+                }
+            }
+        }
+    }
+}
 
 // MARK: - Functions for Translating Speech
 func initialiseModel() -> SinglishToText? {
@@ -68,13 +97,26 @@ func speechToText() -> String {
     return "This is the translated text"
 }
 
+func requestPermissionToRecord() -> Bool{
+    var accessible = true
+    AVAudioSession.sharedInstance().requestRecordPermission { granted in
+        if !granted {
+            accessible = false
+        }
+        print(granted)
+    }
+    return accessible
+}
+
+
 // MARK: - TextBox UI
 
 struct TextBoxView: View {
     @State var input: String = ""
     @State private var searchResult = false
-    @State var model: WordDatabase
+    @EnvironmentObject var model: WordDatabase
     @State var wordToSearch: wordData?
+    @EnvironmentObject var searchHistory: SearchHistory
     
     var body: some View {
         VStack {
@@ -89,6 +131,11 @@ struct TextBoxView: View {
                     for item in model.list {
                         if item.word == input.lowercased() {
                             wordToSearch = item
+                            if item.searched == false {
+                                item.toggleSearched()
+                                model.toggleWordSearched(word: item)
+                                model.getData()
+                            }
                         }
                     }
                     self.searchResult.toggle()
@@ -97,9 +144,9 @@ struct TextBoxView: View {
                 }
                 .sheet(isPresented: $searchResult,
                        onDismiss: {
-                    wordToSearch = wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+                    wordToSearch = wordData(id: "Invalid Word", word: "Word not found", description: "NIL", example: "", searched: false)
                 }, content: {
-                    WordDescriptionView(word: wordToSearch ?? wordData(id: "Invalid Word", word: "Word not found", description: "NIL")
+                    WordDescriptionView(word: wordToSearch ?? wordData(id: "Invalid Word", word: "Word not found", description: "NIL", example: "", searched: false)
 )
                 })
                 

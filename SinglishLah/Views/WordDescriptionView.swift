@@ -23,7 +23,9 @@ struct WordDescriptionView_Previews: PreviewProvider {
     
     static let wordPreview = wordData(id: "1",
                                       word: "Act blur",
-                                      description: "To feign ignorance")
+                                      description: "To feign ignorance",
+                                      example: "",
+                                      searched: false)
     
     static var previews: some View {
         WordDescriptionView(word: wordPreview)
