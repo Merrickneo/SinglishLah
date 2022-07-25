@@ -49,12 +49,19 @@ struct ProfileView: View {
                 }
                 .frame(height: 60)
                 
-                Button(action: {
-                    service.logout()
-                }, label: {
-                    Text("Sign Out")   
-                })
-                .frame(height: 60)
+                
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        service.logout()
+                    }, label: {
+                        Text("Sign Out")
+                    })
+                    .frame(height: 60)
+                    
+                    Spacer()
+                }
             }
             .navigationTitle("Profile Page")
         }

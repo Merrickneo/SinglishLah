@@ -40,18 +40,18 @@
     {
       "name": "Base",
       "vendored_frameworks": [
-        "FirebaseFirestore/BoringSSL-GRPC.xcframework",
         "FirebaseFirestore/FirebaseFirestore.xcframework",
-        "FirebaseFirestore/abseil.xcframework",
+        "FirebaseFirestore/gRPC-Core.xcframework",
         "FirebaseFirestore/gRPC-C++.xcframework",
-        "FirebaseFirestore/gRPC-Core.xcframework"
+        "FirebaseFirestore/BoringSSL-GRPC.xcframework",
+        "FirebaseFirestore/abseil.xcframework"
       ],
       "preserve_paths": [
-        "FirebaseFirestore/BoringSSL-GRPC.xcframework",
         "FirebaseFirestore/FirebaseFirestore.xcframework",
-        "FirebaseFirestore/abseil.xcframework",
+        "FirebaseFirestore/gRPC-Core.xcframework",
         "FirebaseFirestore/gRPC-C++.xcframework",
-        "FirebaseFirestore/gRPC-Core.xcframework"
+        "FirebaseFirestore/BoringSSL-GRPC.xcframework",
+        "FirebaseFirestore/abseil.xcframework"
       ],
       "resources": "FirebaseFirestore/Resources/*.bundle"
     },
