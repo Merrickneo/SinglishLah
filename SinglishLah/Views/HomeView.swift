@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseDatabase
 
 struct HomeView: View {
     //@EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject var service: SessionServiceImpl
     
     @State var progressValue: Float = 0.2
+    
+    @StateObject
+    var viewModel = ReadViewModel()
     
     private let locations = ["Hawker Centre", "Water Park", "MRT Station", "Airport"]
     private let experiences = ["Marina Bay", "Singapore Zoo", "Chinatown", "Kampong Glam"]
@@ -28,6 +33,7 @@ struct HomeView: View {
                             .font(.system(size: 28))
                             .padding()
                         
+                        /*
                         HStack {
                             HStack {
                                 VStack {
@@ -37,12 +43,27 @@ struct HomeView: View {
                                 }.padding()
                             }
                         }
+                        */
                         
-                        //ExploreView()
-                            //.padding()
+                        HStack {
+                            if viewModel.value != nil {
+                                Text("EXP: " + String(viewModel.value!))
+                            } else {
+                                Text("EXP: 0")
+                            }
+                            
+                            Button {
+                                viewModel.readValue()
+                            } label: {
+                                Text("Refresh EXP")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(.blue)
+                                    .cornerRadius(15)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
                         
-                        //TranslateView()
-                            //.padding()
                         
                         Text("Singlish Scenarios")
                             .font(.system(size: 24))
@@ -293,6 +314,26 @@ struct HawkerView: View {
             
             Spacer()
             
+        }
+    }
+}
+
+class ReadViewModel: ObservableObject {
+    var ref = Database.database().reference()
+    
+    @Published
+    var value: Int? = nil
+    var userID = Auth.auth().currentUser?.uid
+    
+    func readValue() {
+        ref.child("users").child(userID!).child("EXP").observeSingleEvent(of: .value) { snapshot in
+            self.value = snapshot.value as? Int ?? 0
+        }
+    }
+    
+    func observer() {
+        ref.child("users").child(userID!).child("EXP").observe(.value) { snapshot in
+            self.value = snapshot.value as? Int ?? 0
         }
     }
 }
