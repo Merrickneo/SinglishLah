@@ -33,6 +33,7 @@ struct HomeView: View {
                             .font(.system(size: 28))
                             .padding()
                         
+                        /*
                         HStack {
                             HStack {
                                 VStack {
@@ -42,22 +43,27 @@ struct HomeView: View {
                                 }.padding()
                             }
                         }
+                        */
                         
-                        if viewModel.value != nil {
-                            Text("EXP: " + String(viewModel.value!))
-                        } else {
-                            Text("Error retrieving EXP")
+                        HStack {
+                            if viewModel.value != nil {
+                                Text("EXP: " + String(viewModel.value!))
+                            } else {
+                                Text("EXP: 0")
+                            }
+                            
+                            Button {
+                                viewModel.readValue()
+                            } label: {
+                                Text("Refresh EXP")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(.blue)
+                                    .cornerRadius(15)
+                            }
                         }
+                        .frame(maxWidth: .infinity)
                         
-                        Button {
-                            viewModel.readValue()
-                        } label: {
-                            Text("Refresh EXP")
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(.blue)
-                                .cornerRadius(15)
-                        }
                         
                         Text("Singlish Scenarios")
                             .font(.system(size: 24))
