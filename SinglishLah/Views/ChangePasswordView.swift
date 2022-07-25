@@ -45,7 +45,9 @@ struct ChangePasswordView: View {
                     )
             }
             Button {
-                success = changePassword(email: email.lowercased())
+                if email != "" {
+                    success = changePassword(email: email.lowercased())
+                }
             } label: {
                 Text("Change Password!")
             }

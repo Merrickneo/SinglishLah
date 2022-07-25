@@ -12,39 +12,53 @@ struct ProfileView: View {
     @EnvironmentObject var service: SessionServiceImpl
     @State var changePassword: Bool = false
     @State var redeemVouchers: Bool = false
-
+    
     var body: some View {
         NavigationView {
-            VStack{
+            List {
                 Button {
                     redeemVouchers.toggle()
                 } label: {
-                    Text("Exchange for Vouchers")
+                    HStack {
+                        Image("voucher_redemption")
+                            .resizable()
+                            .frame(width: 50,  height: 50)
+                        Text(" Exchange for Vouchers")
+                    }
                 }
                 .sheet(isPresented: $redeemVouchers) {
                 } content: {
                     VoucherRedemptionView()
                 }
+                .frame(height: 60)
                 
                 // Change password through sending an email to the user's email
                 Button {
                     changePassword.toggle()
                 } label: {
-                    Text("Change Password")
+                    HStack {
+                        Image("change_password")
+                            .resizable()
+                            .frame(width: 58, height: 60)
+                        Text("Change Password")
+                    }
                 }
                 .sheet(isPresented: $changePassword) {
                 } content: {
                     ChangePasswordView()
                 }
+                .frame(height: 60)
                 
                 Button(action: {
                     service.logout()
                 }, label: {
-                    Text("Sign Out")
-                        .foregroundColor(Color.blue)
+                    Text("Sign Out")   
                 })
+                .frame(height: 60)
             }
+            .navigationTitle("Profile Page")
         }
+        
     }
 }
 
@@ -55,3 +69,32 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView()
     }
 }
+
+
+//NavigationView {
+//    VStack{
+//        Button {
+//            redeemVouchers.toggle()
+//        } label: {
+//            Text("Exchange for Vouchers")
+//        }
+//        .sheet(isPresented: $redeemVouchers) {
+//        } content: {
+//            VoucherRedemptionView()
+//        }
+//
+        // Change password through sending an email to the user's email
+//        Button {
+//            changePassword.toggle()
+//        } label: {
+//            Text("Change Password")
+//        }
+//        .sheet(isPresented: $changePassword) {
+//        } content: {
+//            ChangePasswordView()
+//        }
+//
+//
+//    }
+////    .navigationTitle("Profile Page")
+////}

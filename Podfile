@@ -15,8 +15,6 @@ target 'SinglishLah' do
   
 
 
-
-
   target 'SinglishLahTests' do
     inherit! :search_paths
     # Pods for testing
