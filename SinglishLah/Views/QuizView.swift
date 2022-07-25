@@ -18,7 +18,10 @@ struct QuizView: View {
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView()
+        Group {
+            QuizView()
+            QuizView()
+        }
     }
 }
 
@@ -119,6 +122,10 @@ struct QA: View {
                                 .font(.largeTitle)
                                 .foregroundColor(.black)
                         }
+                        
+                        Text("\(correct*10) EXP awarded")
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
                         
                         Button(action: {
                             present.wrappedValue.dismiss()
@@ -360,6 +367,9 @@ struct QuestionView: View {
     func checkAns() {
         if selected == question.answer! {
             correct += 1
+            
+            // update EXP
+            //Database.database().reference().child("users/\(user.uid)/EXP").setValue(<#T##value: Any?##Any?#>)
         } else {
             wrong += 1
         }
@@ -367,3 +377,20 @@ struct QuestionView: View {
         question.isSubmitted.toggle()
     }
 }
+
+/*
+func getEXP(with userID: String, completion: @escaping ((_ user: User) -> Void)) {
+    Database.database().reference().child("users").child(userID).observeSingleEvent(of: .value) { (snapshot) in
+        // Get user value
+        let value = snapshot.value as? [String: Any]
+        let currentEXP = value?["EXP"] as? Int ?? 0
+
+        var user = User()
+        user.EXP = currentEXP
+
+        DispatchQueue.main.async {
+            completion(user)
+        }
+    }
+}
+*/

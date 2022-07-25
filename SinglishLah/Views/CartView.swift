@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var voucherManager: VoucherManager
     @State var redeemed: Bool = false
+    @State var failedRedemption: Bool = false
     var body: some View {
         ScrollView {
             if cartManager.vouchers.count > 0 {
@@ -24,7 +27,8 @@ struct CartView: View {
                 }
                 .padding()
                 Button {
-                    redeemed.toggle()
+                    redeemed = purchaseVouchers(cartManager: cartManager, voucherManager: voucherManager)
+                    failedRedemption = !redeemed
                     if redeemed == true {
                         cartManager.removeAllVouchers()
                     }
@@ -45,7 +49,46 @@ struct CartView: View {
                 redeemed.toggle()
             }
         }
+//        .alert("Not enough EXP", isPresented: $failedRedemption) {
+//            Button("OK", role: .cancel) {
+//                failedRedemption.toggle()
+//            }
+//        }
     }
+}
+
+func purchaseVouchers(cartManager: CartManager, voucherManager: VoucherManager) -> Bool {
+    let ref = Database.database().reference()
+    var exp: Int = 0
+    var requiredExp = 0
+    var currentVouchers: Dictionary = [String: Int]()
+    
+    for voucher in cartManager.vouchers {
+        requiredExp = 100 * voucher.amount
+        voucherManager.addToList(voucher: Voucher(name: "$\(voucher.amount) dollars", amount: voucher.amount))
+    }
+    print(voucherManager.vouchers)
+    
+    let userID = Auth.auth().currentUser?.uid
+    ref.child("users").child(userID!).observeSingleEvent(of: .value, with: { snapshot in
+        let value = snapshot.value as? NSDictionary
+        exp = value!["EXP"] as! Int
+        currentVouchers = value!["Vouchers"] as! Dictionary
+    }) { error in
+        print(error.localizedDescription)
+    }
+    
+    if exp >= requiredExp {
+        exp -= requiredExp
+        for voucher in cartManager.vouchers {
+            currentVouchers[String(voucher.amount)]! += 1
+        }
+        
+        ref.child("users").child(userID!).setValue(["EXP": exp,
+                                                    "Vouchers": currentVouchers])
+        return true
+    }
+    return true
 }
 
 

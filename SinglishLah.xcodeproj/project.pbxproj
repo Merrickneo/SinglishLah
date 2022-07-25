@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		462DFD27288850AF00371A4D /* VoucherFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462DFD26288850AF00371A4D /* VoucherFlipView.swift */; };
 		46351A352884EFBE00EB3536 /* VoucherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46351A342884EFBE00EB3536 /* VoucherCard.swift */; };
+		464874BE288C3573006A2050 /* SearchedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464874BD288C3573006A2050 /* SearchedWords.swift */; };
+		464874C0288D48F1006A2050 /* RedeemVouchersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464874BF288D48F1006A2050 /* RedeemVouchersView.swift */; };
+		464874C2288D4948006A2050 /* VoucherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464874C1288D4948006A2050 /* VoucherManager.swift */; };
 		464E20B02885475F00C7193D /* VoucherRedemptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */; };
 		464E20D328854BBD00C7193D /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D228854BBD00C7193D /* CartButton.swift */; };
 		464E20D528854CEF00C7193D /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E20D428854CEF00C7193D /* CartView.swift */; };
@@ -60,6 +63,9 @@
 /* Begin PBXFileReference section */
 		462DFD26288850AF00371A4D /* VoucherFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherFlipView.swift; sourceTree = "<group>"; };
 		46351A342884EFBE00EB3536 /* VoucherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCard.swift; sourceTree = "<group>"; };
+		464874BD288C3573006A2050 /* SearchedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedWords.swift; sourceTree = "<group>"; };
+		464874BF288D48F1006A2050 /* RedeemVouchersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemVouchersView.swift; sourceTree = "<group>"; };
+		464874C1288D4948006A2050 /* VoucherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherManager.swift; sourceTree = "<group>"; };
 		464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherRedemptionView.swift; sourceTree = "<group>"; };
 		464E20D228854BBD00C7193D /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		464E20D428854CEF00C7193D /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 				5D4341012885D78D00AE8229 /* WordData.swift */,
 				5D4340FF2885D78D00AE8229 /* WordDatabase.swift */,
 				4681E27D282D0E9000E2BA60 /* SinglishLahApp.swift */,
+				464874BD288C3573006A2050 /* SearchedWords.swift */,
+				464874C1288D4948006A2050 /* VoucherManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,9 +155,10 @@
 				5DF62FFD28828C0F00FA08C1 /* QuizView.swift */,
 				5DF9E3E3286458ED00EF5CAC /* ProfileView.swift */,
 				4689C464287DAF7300B71BC2 /* ChangePasswordView.swift */,
+				464E20D428854CEF00C7193D /* CartView.swift */,
 				464E20AF2885475F00C7193D /* VoucherRedemptionView.swift */,
 				462DFD26288850AF00371A4D /* VoucherFlipView.swift */,
-				464E20D428854CEF00C7193D /* CartView.swift */,
+				464874BF288D48F1006A2050 /* RedeemVouchersView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464874BE288C3573006A2050 /* SearchedWords.swift in Sources */,
 				46CCE26A2852496B00FCE0D7 /* SinglishSearchPage.swift in Sources */,
 				5DF9E3E4286458ED00EF5CAC /* ProfileView.swift in Sources */,
 				46552E26283224BB00F6CFB0 /* RegistrationPageView.swift in Sources */,
@@ -404,9 +414,11 @@
 				462DFD27288850AF00371A4D /* VoucherFlipView.swift in Sources */,
 				464E20D528854CEF00C7193D /* CartView.swift in Sources */,
 				5D4341082885D78D00AE8229 /* WordDatabase.swift in Sources */,
+				464874C2288D4948006A2050 /* VoucherManager.swift in Sources */,
 				464E20D92885541900C7193D /* VoucherRow.swift in Sources */,
 				5D277CDF28649F8100C521EE /* SignInView.swift in Sources */,
 				5D4341072885D78D00AE8229 /* GrowingButton.swift in Sources */,
+				464874C0288D48F1006A2050 /* RedeemVouchersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -547,6 +560,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -567,7 +581,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SinglishLah/Preview Content\"";
 				DEVELOPMENT_TEAM = 6975939K2Q;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SinglishLah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -596,7 +611,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SinglishLah/Preview Content\"";
 				DEVELOPMENT_TEAM = 6975939K2Q;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = SinglishLah/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -624,7 +640,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6975939K2Q;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "/Users/merrick/Desktop/Orbital Project/SinglishLah/SinglishLah/Info.plist";
+				INFOPLIST_FILE = /Users/merrick/Documents/SinglishLah/SinglishLah/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SinglishLah.SinglishLahTests;
@@ -645,7 +661,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6975939K2Q;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "/Users/merrick/Desktop/Orbital Project/SinglishLah/SinglishLah/Info.plist";
+				INFOPLIST_FILE = /Users/merrick/Documents/SinglishLah/SinglishLah/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SinglishLah.SinglishLahTests;

@@ -34,7 +34,9 @@ class WordDatabase: ObservableObject {
                                     // Create a wordData item for each document returned
                                     return wordData(id: d.documentID,
                                                 word: d["word"] as? String ?? "",
-                                                description: d["description"] as? String ?? "")
+                                                description: d["description"] as? String ?? "",
+                                                example: d["example"] as? String ?? "",
+                                                searched: d["searched"] as? Bool ?? false)
                                 }
                             }
                             
@@ -46,5 +48,24 @@ class WordDatabase: ObservableObject {
                     }
                 }
     }
-            
+    func toggleWordSearched(word: wordData) {
+        // Get a reference to the database
+        let db = Firestore.firestore()
+        
+        // Update the searched field in the database
+        
+        // Create a reference to the SinglishVocabulary collection
+        let singlishVocabularyRef = db.collection("SinglishVocabulary").document(word.id)
+        
+        singlishVocabularyRef.updateData([
+            "searched": true
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+        
+    }
 }

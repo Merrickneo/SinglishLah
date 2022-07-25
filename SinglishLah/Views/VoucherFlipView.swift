@@ -113,12 +113,11 @@ struct VoucherFlipView_Previews: PreviewProvider {
         VoucherFlipView(front: {
             VoucherFront(voucher: voucherList[0])
         }, back: {
-                VoucherBack(voucher: voucherList[2])
+                VoucherBack(voucher: voucherList[0])
             },
             voucher: voucherList[0]
                         
         )
-        VoucherFront(voucher: voucherList[1])
     }
 }
 
