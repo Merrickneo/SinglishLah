@@ -6,31 +6,52 @@
 //
 
 import XCTest
+import Firebase
 @testable import SinglishLah
 
 class SinglishLahTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    
+    // Check if app can reset one's password and is connected to Firebase
+    func connFirebase() {
+        let auth = Auth.auth()
+        var success = false
+        do {
+            auth.sendPasswordReset(withEmail: "merrickneo@gmail.com")
+            success.toggle()
+            print("HI")
         }
+        catch {
+            print("Not able to reset password")
+        }
+        XCTAssertEqual(success, true)
     }
+    
+    // Remove from CartManager
+    func testRemoveVouchers() {
+        
+        let cartManager = CartManager()
+        
+        cartManager.addToCart(voucher: Voucher(name: "This is a $5 voucher", amount: 5))
+        
+        cartManager.removeAllVouchers()
 
+        XCTAssertEqual(cartManager.vouchers.count, 0)
+    }
+    
+    // Check if searching a word adds it to a user's history
+    func wordAddedToHistory() {
+        let searchHistory = SearchHistory()
+        
+        let word = wordData(id: "1", word: "abit", description: "a little bit", example: "I am abit hungry", searched: false)
+        
+        word.searched = true
+        
+        if word.searched == true {
+            searchHistory.addToHistory(word: word)
+        }
+        XCTAssertEqual(searchHistory.searchedWords.count, 1)
+    }
+    
+    
 }
