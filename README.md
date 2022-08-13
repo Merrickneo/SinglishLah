@@ -3,9 +3,8 @@
 # Description
 SinglishLah! is an IOS mobile application aimed at helping non-locals get accustomed to the Singlish culture here in Singapore. This application provides real-time translation from Singlish to English and at the same time reinforces learning through quizzes.
 
-# Languages and API used:
-Languages: Swift, Python, Firebase, ReactJS 
-API: Google Cloud Translate API, Python Speech Recognition API
+# Tech Stack
+Languages: Swift, CoreML, Firebase, Apple CoreML
 
 # Features:
 We seek to create a mobile application that can help tourists and other “non-native” speakers of Singlish be able to have an enjoyable and hassle-free stay in Singapore. With the help of SinglishLah!, they can have access to real-time translation of Singlish.
@@ -38,8 +37,7 @@ Singlish Scenarios
 - e.g. Coffee Shop, MRTs 
 
 Experience Singapore
-- Shows users various tourist attractions based on their current locality
-- Filters and shows the attractions that are the closest to their location
+- Recommends users various tourist attractions to explore
 
 Buttons to switch to the other pages
 - At the bottom of the screen, which is accessible across all the different pages (Homepage, Search Page, Vocabulary Builder Page, Profile Page)
@@ -55,20 +53,19 @@ Guided Sentence Structuring Game
 - EXP points will be awarded to the user for completing exercises
 
 ### 5) EXP Accumulation
-Progress Bar shows users how much more XP he/she needs to level up. Levelling up unlocks more customisation options for his avatar icon
+Progress Bar shows users how much more XP he/she needs to level up.
 
 Streaks
-- Users are given bonus XP if he/she partakes in quizzes daily. S
+- Users are given bonus XP if he/she partakes in quizzes daily.
 - Serves as a motivator for the user to make progress in Singlish daily.
 
 
 ### 6) Profile Page
 Settings 
-- Users are able to configure various settings such as dark mode, change personal particulars
+- Users are able to configure various settings such as changing their password
 
-Customisation of in-app avatar
-- As the user attains higher levels, he/she will unlock more customisation options for his avatar
-- Users can then customise the avatar to suit his/her liking
+Voucher Redemption
+- Users can redeem for vouchers using the EXP they accumulated
 
 
 
